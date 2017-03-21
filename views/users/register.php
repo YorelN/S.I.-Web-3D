@@ -7,5 +7,9 @@
         <label for="pass">Mot de passe:</label>
         <input type="password" name="password" id="pass" required>
     </p>
-    <input type="submit" value="S'inscrire">
+    <p>
+        <label for="univ">Université</label>
+        <input type="universite" name="universite" id="univ" required>
+    </p>
+    <input type="submit" name="submit" value="S'inscrire">
 </form>
