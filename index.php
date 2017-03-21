@@ -1,5 +1,7 @@
 <?php
 
+require 'config/db.php';
+
 require 'classes/Boostrap.php';
 
 $bootstrap = new Bootstrap($_GET);
