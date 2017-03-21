@@ -13,4 +13,10 @@ class Users extends Controller
         $viewmodel = new UserModel();
         $this->returnView($viewmodel->login(), false);
     }
+
+    protected function logout()
+    {
+        $viewmodel = new UserModel();
+        $this->returnView($viewmodel->logout(), false);
+    }
 }

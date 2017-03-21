@@ -28,4 +28,9 @@ abstract class Controller
             require($view);
         }
     }
+
+    protected function error404()
+    {
+        $this->returnView("", true);
+    }
 }

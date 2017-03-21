@@ -26,6 +26,7 @@
                     <div class="control-group">
                         <input type="password" class="login-field" value="" placeholder="Mot de passe" name="password" ">
                     </div>
+                    <?php Message::display()?>
                     <a href="#" class="forgot_mdp">Mot de passe oublié ?</a>
                     <input type="submit" class="gray_btn" name="submit" value="Valider">
                 </div>

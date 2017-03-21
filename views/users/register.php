@@ -1,3 +1,4 @@
+<?php Message::display()?>
 <form method="post" action="<?php $_SERVER['PHP_SELF']?>">
     <p>
         <label for="email">Email :</label>
