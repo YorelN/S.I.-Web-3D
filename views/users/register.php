@@ -7,14 +7,13 @@
         <label for="pass">Mot de passe:</label>
         <input type="password" name="password" id="pass" required>
     </p>
-<<<<<<< Updated upstream
+
     <p>
         <label for="univ">Université</label>
         <input type="universite" name="universite" id="univ" required>
     </p>
     <input type="submit" name="submit" value="S'inscrire">
 </form>
-=======
+
     <input type="submit" value="S'inscrire">
 </form>
->>>>>>> Stashed changes

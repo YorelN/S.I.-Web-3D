@@ -5,7 +5,6 @@ class UserModel extends Model
     public function register()
 
     {
-<<<<<<< Updated upstream
         $password = md5($_POST['password']);
 
         if ($_POST['submit']) {
@@ -21,13 +20,11 @@ class UserModel extends Model
 
         }
             return;
-=======
 
     }
 
     public function login()
     {
 
->>>>>>> Stashed changes
     }
 }
