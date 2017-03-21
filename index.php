@@ -1,10 +1,12 @@
 <?php
+session_start();
 
 require 'config/db.php';
 
 require 'classes/Boostrap.php';
 require 'classes/Controller.php';
 require 'classes/Model.php';
+require 'classes/Message.php';
 
 require "controllers/home.php";
 require "controllers/users.php";
