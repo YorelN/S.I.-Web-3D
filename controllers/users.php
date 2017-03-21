@@ -1,4 +1,10 @@
 <?php
 
-require "../classes/Model.php";
-
+class Users extends Controller
+{
+    protected function register()
+    {
+        $viewmodel = new UserModel();
+        $this->returnView($viewmodel->register(), false);
+    }
+}
