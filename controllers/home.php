@@ -1,6 +1,10 @@
 <?php
-require "../classes/Model.php";
 
-class Homemodel extends Model {
-
+class Home extends Controller
+{
+    protected function Index()
+    {
+        $viewmodel = new HomeModel();
+        $this->returnView($viewmodel->Index(), true);
+    }
 }

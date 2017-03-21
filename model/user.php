@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: antoinemasselot
- * Date: 20/03/2017
- * Time: 21:29
- */
+
+class UserModel extends Model
+{
+    public function register()
+    {
+        
+    }
+}
