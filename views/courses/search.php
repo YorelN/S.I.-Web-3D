@@ -33,21 +33,21 @@
 
 <section>
     <aside class="search_result">
-        <article class="article">
-            <h2>Lorem Ipsum</h2>
-            <span>Vendredi 13 Avril 2017 - 16:20</span>
-            <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
-            <address>Auteur: Ada Lovelace </address>
-            <i><img src="../Pictos/star.svg" alt=""></i>
-        </article>
-
-        <article class="article">
-            <h2>Lorem Ipsum</h2>
-            <span>Vendredi 13 Avril 2017 - 16:20</span>
-            <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
-            <address>Auteur: Ada Lovelace </address>
-            <i><img src="../Pictos/unstar.svg" alt=""></i>
-        </article>
+<!--        <article class="article">-->
+<!--            <h2>Lorem Ipsum</h2>-->
+<!--            <span>Vendredi 13 Avril 2017 - 16:20</span>-->
+<!--            <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>-->
+<!--            <address>Auteur: Ada Lovelace </address>-->
+<!--            <i><img src="../Pictos/star.svg" alt=""></i>-->
+<!--        </article>-->
+<!---->
+<!--        <article class="article">-->
+<!--            <h2>Lorem Ipsum</h2>-->
+<!--            <span>Vendredi 13 Avril 2017 - 16:20</span>-->
+<!--            <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>-->
+<!--            <address>Auteur: Ada Lovelace </address>-->
+<!--            <i><img src="../Pictos/unstar.svg" alt=""></i>-->
+<!--        </article>-->
     </aside>
 
     <aside class="tag">
@@ -111,7 +111,7 @@
             article.innerHTML =
                 '<h2>'+articles[i].name+'</h2>' +
                 '<p>'+articles[i].content+'</p>' +
-                '<i><img src="../Pictos/star.svg" alt=""></i>';
+                '<i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>';
             app.appendChild(article);
         }
     }

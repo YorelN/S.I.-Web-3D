@@ -28,7 +28,7 @@
             <span>Vendredi 13 Avril 2017 - 16:20</span>
             <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
             <address>Auteur: Ada Lovelace </address>
-            <i><img src="../Pictos/star.svg" alt=""></i>
+            <i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>
         </article>
 
         <article class="article">
@@ -36,7 +36,7 @@
             <span>Vendredi 13 Avril 2017 - 16:20</span>
             <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
             <address>Auteur: Ada Lovelace </address>
-            <i><img src="../Pictos/unstar.svg" alt=""></i>
+            <i><img src="../assets/img-layout/Pictos/unstar.svg" alt=""></i>
         </article>
 
         <article class="article">
@@ -44,7 +44,7 @@
             <span>Vendredi 13 Avril 2017 - 16:20</span>
             <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
             <address>Auteur: Ada Lovelace </address>
-            <i><img src="../Pictos/star.svg" alt=""></i>
+            <i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>
         </article>
 
         <article class="article">
@@ -52,7 +52,7 @@
             <span>Vendredi 13 Avril 2017 - 16:20</span>
             <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
             <address>Auteur: Ada Lovelace </address>
-            <i><img src="../Pictos/unstar.svg" alt=""></i>
+            <i><img src="../assets/img-layout/Pictos/unstar.svg" alt=""></i>
         </article>
 
         <article class="article">
@@ -60,7 +60,7 @@
             <span>Vendredi 13 Avril 2017 - 16:20</span>
             <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
             <address>Auteur: Ada Lovelace </address>
-            <i><img src="../Pictos/unstar.svg" alt=""></i>
+            <i><img src="../assets/img-layout/Pictos/unstar.svg" alt=""></i>
         </article>
 
         <article class="article">
@@ -68,7 +68,7 @@
             <span>Vendredi 13 Avril 2017 - 16:20</span>
             <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
             <address>Auteur: Ada Lovelace </address>
-            <i><img src="../Pictos/unstar.svg" alt=""></i>
+            <i><img src="../assets/img-layout/Pictos/unstar.svg" alt=""></i>
         </article>
     </section>
 
