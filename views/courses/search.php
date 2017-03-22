@@ -16,6 +16,23 @@
         .visible {
             opacity:1;
         }
+
+        #search_bar {
+            position: relative;
+        }
+
+        .tags {
+            position: absolute;
+            bottom: 3.5px;
+            right: 5%;
+            width: 100%;
+        }
+
+        .tags div {
+            float: right;
+            padding: .5% 1.5%;
+            margin: 1% .5%;
+        }
     </style>
 </head>
 <body>
@@ -24,6 +41,7 @@
 
 <div id="search_bar">
     <input type="search">
+    <div class="tags"></div>
 </div>
 <div class="results">
     <ul>
@@ -71,12 +89,22 @@
 <script type="text/javascript">
     var app = document.querySelector('.search_result');
     var articles = <?=$viewmodel?>;
+    var tags = document.querySelector('.tags');
+    var new_articles = '';
 //    var loading = document.querySelector('.loading');
     var lis = document.querySelectorAll('.tag div');
     render();
     for (let i = 0; i < lis.length; i++) {
         lis[i].addEventListener('click', function() {
+            new_articles = this.innerHTML;
             loadFile(this.innerHTML, '<?= ROOT_URL."courses/api"?>');
+            let div =document.createElement('div');
+            div.classList.add(this.className);
+            div.innerHTML= this.innerHTML + '<i>&#x2716;</i>';
+            tags.appendChild(div);
+            div.addEventListener('click', function() {
+                this.remove();
+            });
         });
     }
 
@@ -120,9 +148,11 @@
             let article = document.createElement('article');
             article.classList.add('article');
             article.innerHTML =
-                '<h2>'+articles[i].name+'</h2>' +
-                '<p>'+articles[i].content+'</p>' +
-                '<i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>';
+                '<a href="<?=ROOT_URL?>courses/articles/'+ articles[i].id +'">' +
+                    '<h2>'+articles[i].name+'</h2>' + '</a>' +
+                    '<p>'+articles[i].content+'</p>' +
+                    '<i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>'
+                ;
             app.appendChild(article);
             article.querySelector("i").addEventListener('click', function() {
               

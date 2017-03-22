@@ -19,4 +19,9 @@ class Courses extends Controller
       $viewmodel = new CourseModel();
       $viewmodel->addfavoris();
     }
+
+    protected function articles() {
+        $viewmodel = new CourseModel();
+        $this->returnView($viewmodel->articles(), false);
+    }
 }
