@@ -10,7 +10,7 @@
     <title>Articles</title>
 </head>
 <body id="login">
-<?php require "nav_bar.php"?>
+<?php require "nav_bar.php" ?>
 
     <nav class="clearfix">
         <a href="#" class="all_articles">

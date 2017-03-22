@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../S.I.-Web-3D/assets/styles/main.css">
 
-<?php require "nav_bar.php"?>
+<?php require "includes/nav_bar.php" ?>
 
 <form action="" name="search" id="search_bar">
     <input type="search">
@@ -11,7 +11,7 @@
     </ul>
 </div>
 
-<section>
+<section class="app">
     <aside class="search_result">
         <article class="article">
             <h2>Lorem Ipsum</h2>
