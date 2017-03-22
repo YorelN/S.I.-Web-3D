@@ -22,9 +22,9 @@
 
 <?php require "includes/nav_bar.php" ?>
 
-<form action="" name="search" id="search_bar">
+<div id="search_bar">
     <input type="search">
-</form>
+</div>
 <div class="results">
     <ul>
 
@@ -52,20 +52,18 @@
 
     <aside class="tag">
         <h2>#Tags</h2>
-        <div class="red_tag">Epaules</div>
+        <div class="red_tag">Epaule</div>
         <div class="green_tag">Cardiologie</div>
-        <div class="red_tag">Poumons</div>
-        <div class="blue_tag">Psycho</div>
+        <div class="red_tag">Poumon</div>
+        <div class="blue_tag">Coeur</div>
         <div class="purple_tag">Neurologie</div>
         <div class="red_tag">ORL</div>
-        <div class="green_tag">Pharma</div>
-        <div class="red_tag">Epaules</div>
+        <div class="green_tag">Pharmacologie</div>
         <div class="green_tag">Cardiologie</div>
-        <div class="red_tag">Poumons</div>
         <div class="blue_tag">Psychologie</div>
-        <div class="purple_tag">Neurologie</div>
+        <div class="purple_tag">Nerf</div>
         <div class="red_tag">ORL</div>
-        <div class="green_tag">Pharma</div>
+        <div class="green_tag">Medicament</div>
 
     </aside>
 </section>

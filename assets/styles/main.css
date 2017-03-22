@@ -57,11 +57,11 @@ a {
 }
 
 #home {
-    background: url("../../../Integration/leo_vinci.jpg") center no-repeat fixed;
+    background: url("../img-layout/leo_vinci.jpg") center no-repeat fixed;
 }
 
 #login {
-    background: url("../../../Integration/university.jpg") center no-repeat fixed;
+    background: url("../img-layout/university.jpg") center no-repeat fixed;
 }
 
 
