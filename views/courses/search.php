@@ -17,6 +17,7 @@
             opacity:1;
         }
 
+
         #search_bar {
             position: relative;
         }
@@ -28,11 +29,17 @@
             width: 100%;
         }
 
+        .tags div,
+        .tag div {
+            cursor: pointer;
+        }
+
         .tags div {
             float: right;
             padding: .5% 1.5%;
             margin: 1% .5%;
         }
+
     </style>
 </head>
 <body>
@@ -70,14 +77,14 @@
 
     <aside class="tag">
         <h2>#Tags</h2>
-        <div class="red_tag">Epaule</div>
+        <div class="blue_tag">Epaule</div>
         <div class="green_tag">Cardiologie</div>
         <div class="red_tag">Poumon</div>
         <div class="blue_tag">Coeur</div>
         <div class="purple_tag">Neurologie</div>
         <div class="red_tag">ORL</div>
         <div class="green_tag">Pharmacologie</div>
-        <div class="green_tag">Cardiologie</div>
+        <div class="purple_tag">Cardiologie</div>
         <div class="blue_tag">Psychologie</div>
         <div class="purple_tag">Nerf</div>
         <div class="red_tag">ORL</div>
