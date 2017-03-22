@@ -13,4 +13,10 @@ class Courses extends Controller
         $viewmodel = new CourseModel();
         $viewmodel->api();
     }
+
+    protected function addfavoris()
+    {
+      $viewmodel = new CourseModel();
+      $viewmodel->addfavoris();
+    }
 }

@@ -76,7 +76,6 @@
     render();
     for (let i = 0; i < lis.length; i++) {
         lis[i].addEventListener('click', function() {
-            console.log(lis[i].innerHTML);
             loadFile(this.innerHTML, '<?= ROOT_URL."courses/api"?>');
         });
     }
@@ -93,6 +92,20 @@
         };
         xhr.send('tag=' + objet);
     }
+
+    function loadF(objet,objet2, page)
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", page, true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+              console.log(xhr.response);
+            }
+        };
+        xhr.send('cours=' + objet +"&user="+objet2);
+    }
+
 
     function readData(xhr)
     {
@@ -111,6 +124,10 @@
                 '<p>'+articles[i].content+'</p>' +
                 '<i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>';
             app.appendChild(article);
+            article.querySelector("i").addEventListener('click', function() {
+              
+              loadF(articles[i].id,<?=$_SESSION['id']?>,"<?=ROOT_URL.'courses/addfavoris'?>");
+            });
         }
     }
 </script>
