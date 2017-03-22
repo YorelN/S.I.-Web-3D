@@ -8,6 +8,7 @@ abstract class Model
     public function __construct()
     {
         $this->_db = new PDO(DBN, DB_USER, DB_PASS);
+        $this->_db->exec("SET NAMES UTF8");
     }
 
     protected function resultSet()

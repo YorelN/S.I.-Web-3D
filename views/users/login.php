@@ -15,7 +15,7 @@
     <div class="login">
         <div class="login-screen">
             <div class="app-title">
-                <a class="blue_btn" href="#">Inscription</a>
+                <a class="blue_btn" href="<?=ROOT_URL.'users/register'?>">Inscription</a>
             </div>
             <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
                 <div class="login-form">

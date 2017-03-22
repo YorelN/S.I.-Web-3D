@@ -12,6 +12,11 @@ class CourseModel extends Model
 
     public function api()
     {
+//        if (!isset($_SESSION['logged_in'])) {
+//            Message::setMsg("Vous devez être connecté pour accéder aux cours.","error");
+//            header("Location: ".ROOT_URL."users/login");
+//        }
+
         if ($_POST['tag']) {
             $sql = "SELECT cours.id as id, cours.name as name, cours.content as content, tags.name as tag FROM `cours` INNER JOIN `tags` ON cours.tag_id = tags.id WHERE tags.name = :tags";
             $this->_stmt = $this->_db->prepare($sql);
