@@ -11,6 +11,7 @@ public class ChangeSector : MonoBehaviour {
     public GameObject Secteur3;
     public GameObject Secteur4;
     public GameObject MenuPrincipale;
+    public GameObject Muscles;
 
     // Use this for initialization
     void Start () {
@@ -33,5 +34,6 @@ public class ChangeSector : MonoBehaviour {
         Secteur3.SetActive(false);
         Secteur4.SetActive(false);
         MenuPrincipale.SetActive(false);
+        Muscles.SetActive(false);
     }
 }
