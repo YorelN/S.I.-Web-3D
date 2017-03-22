@@ -57,12 +57,17 @@ a {
 }
 
 #home {
-    background: url("../img-layout/leo_vinci.jpg") center no-repeat fixed;
+    background: url("../../../img-layout/leo_vinci.jpg") fixed no-repeat;
+    background-size: cover;
 }
 
 #login {
-    background: url("../img-layout/university.jpg") center no-repeat fixed;
+    background: url("../../../img-layout/university.jpg") no-repeat fixed;
+    background-size: cover;
+
 }
+
+
 
 
 
@@ -150,7 +155,7 @@ input:focus {
     margin: 7% auto;
     border-radius: 0;
     letter-spacing: 2px;
-
+    cursor: pointer;
 }
 
 .red_btn {
@@ -199,18 +204,15 @@ input:focus {
 
 /*  =====================    //  HOME  //    ================================   */
 
-#home h1 {
-    padding: 1%;
-    margin: 0 auto;
-}
 
 
 .category {
-    width: 19.75%;
-    height: 90vh;
+    width: 20.1%;
+    height: 101vh;
     text-align: center;
-    padding: 20% 0;
-    margin: 0;
+    overflow: hidden;
+    padding: 25% 0;
+    margin: -0.19%;
     font-family: 'Dosis', sans-serif;
     font-weight: 500;
     font-size: 2.5rem;
@@ -218,22 +220,53 @@ input:focus {
     display: inline-block;
 }
 
-.category:nth-child(2) {
-    background-color: rgba(255, 0, 0, 0.55);
+.category:first-child {
+    background-color: rgba(238, 0, 0, 0.75);
+    transition: 0.2s;
 }
-.category:nth-child(3) {
-    background-color: rgba(204, 0, 255, 0.55);
-}
-.category:nth-child(4) {
-    background-color: rgba(21, 145, 255, 0.5);
-}
-.category:nth-child(5) {
-    background-color: rgba(138, 255, 126, 0.55);
-}
-.category:last-child {
-    background-color: rgba(255, 193, 0, 0.55);
+.category:first-child:hover {
+    background-color: rgba(238, 0, 0, 0.9);
+    transition: 0.4s;
 }
 
+.category:nth-child(2) {
+    background-color: rgba(144, 0, 179, 0.75);
+    transition: 0.2s;
+}
+.category:nth-child(2):hover {
+    background-color: rgba(144, 0, 179, 0.9);
+    transition: 0.4s;
+}
+
+
+.category:nth-child(3) {
+    background-color: rgba(21, 145, 255, 0.75);
+    transition: 0.2s;
+}
+.category:nth-child(3):hover {
+    background-color: rgba(21, 145, 255, 0.9);
+    transition: 0.4s;
+}
+
+
+.category:nth-child(4) {
+    background-color: rgba(106, 198, 98, 0.75);
+    transition: 0.2s;
+}
+.category:nth-child(4):hover {
+    background-color: rgba(106, 198, 98, 0.9);
+    transition: 0.4s;
+}
+
+
+.category:last-child {
+    background-color: rgba(255, 193, 0, 0.75);
+    transition: 0.2s;
+}
+.category:last-child:hover {
+    background-color: rgba(255, 193, 0, 0.9);
+    transition: 0.4s;
+}
 
 
 /*  =====================    //  NAV_BAR  //    ================================   */
@@ -296,6 +329,7 @@ input:focus {
     float: left;
     color: black;
     display: block;
+    font-family: 'Dosis', sans-serif;
 }
 
 .notActive {
@@ -367,7 +401,7 @@ input {
 
 
 input[type=search] {
-    background: url(../img-layout/Pictos/search.svg) no-repeat 15px center;
+    background: url(../../../img-layout/Pictos/search.svg) no-repeat 15px center;
     background-size: 20px;
     border: solid 1px #ddd;
     padding: 9px 10px 9px 32px;
@@ -375,7 +409,6 @@ input[type=search] {
     -webkit-border-radius: 10em;
     -moz-border-radius: 10em;
     border-radius: 10em;
-
 }
 
 
@@ -463,27 +496,114 @@ input[type=search] {
 
 
 
+/*  =====================    //  DETAILS_ARTICLE  //    ================================   */
+
+.trois_d {
+    margin: 5% auto 2% auto;
+    width: 100%;
+    height: 70vh;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+
+
+.article_lies {
+    width: 35%;
+    margin: 2% 1%;
+    float: right;
+    position: relative;
+    font-family: 'Dosis', sans-serif;
+    line-height: 22px;
+}
+
+.article_lies span,address {
+    opacity: 0.3;
+    padding: 2% 0 2% 0;
+}
+
+.article_lies h2 {
+    padding: 1%;
+}
+
+.article_lies i img {
+    width: 22px;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
+
+.details_article {
+    width: 55%;
+    margin: 0 1% 0 7%;
+    float: left;
+    background: white;
+    padding: 1.5%;
+    border-radius: 7px;
+}
+
+.details_article h1 {
+    text-align: left;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 3% 0;
+}
+
+.details_article p {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 200;
+    line-height: 33px;
+    font-size: 22px;
+}
+
+.details_article span {
+    font-family: 'Dosis', sans-serif;
+    opacity: 0.4;
+    padding: 0;
+    font-size: 0.8rem;
+}
+
+.add_revision i img {
+    width: 33px;
+    display: inline-block;
+    margin: -1% 2% -1% 8.5%;
+}
+.add_revision a {
+    display: inline-block;
+    font-family: 'Dosis', sans-serif;
+    color: #00e11a;
+    font-size: 1.4rem;
+}
+
+.trois_d_fullpage {
+    width: 100%;
+    height: 91vh;
+    overflow: hidden;
+    background: lightgrey;
+    margin: 5% auto 0 auto;
+}
+
+
+/*  =====================    //  ORGANISATION  //    ================================   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /*  =====================    //  FAVORIS  //    ================================   */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*  =====================    //  RESPONSIVE  //    ================================   */
@@ -498,7 +618,7 @@ input[type=search] {
 
     #login .article {
         width: 30%;
-        margin: 1%;
+        margin: 2% 1.5%;
         position: relative;
         display: inline-block;
 
