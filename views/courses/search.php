@@ -88,7 +88,7 @@
 
 <script type="text/javascript">
     var app = document.querySelector('.search_result');
-    var articles = <?=$viewmodel?>;
+    var articles = [];
     var tags = document.querySelector('.tags');
     var new_articles = '';
 //    var loading = document.querySelector('.loading');
@@ -98,12 +98,16 @@
         lis[i].addEventListener('click', function() {
             new_articles = this.innerHTML;
             loadFile(this.innerHTML, '<?= ROOT_URL."courses/api"?>');
-            let div =document.createElement('div');
+            let div = document.createElement('div');
             div.classList.add(this.className);
-            div.innerHTML= this.innerHTML + '<i>&#x2716;</i>';
+            div.innerHTML= this.innerHTML;
             tags.appendChild(div);
             div.addEventListener('click', function() {
+                var toRemove = document.querySelectorAll('.' + this.innerHTML);
                 this.remove();
+                for (let j = 0; j < toRemove.length; j++) {
+                    app.removeChild(toRemove[j]);
+                }
             });
         });
     }
@@ -143,7 +147,6 @@
 
     function render()
     {
-        app.innerHTML = "";
         for (let i = 0; i < articles.length; i++) {
             let article = document.createElement('article');
             article.classList.add('article');
@@ -153,6 +156,7 @@
                     '<p>'+articles[i].content+'</p>' +
                     '<i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>'
                 ;
+            article.classList.add(new_articles);
             app.appendChild(article);
             article.querySelector("i").addEventListener('click', function() {
               

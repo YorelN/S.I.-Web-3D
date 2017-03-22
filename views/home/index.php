@@ -10,4 +10,4 @@
 </div>
 <?php else: ?>
 <div>Connectez vous : <a href="<?=ROOT_URL.'users/login'?>">Ici !</a></div>
-<?php endif;
+<?php endif; ?>

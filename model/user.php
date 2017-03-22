@@ -63,8 +63,7 @@ class UserModel extends Model
                 $_SESSION['mail'] = $row['mail'];
                 $_SESSION['logged_in'] = true;
                 // $_SESSION['name'] = $row['name'];
-
-                echo 'Vous êtes bien connecté';
+                header('Location : ' . ROOT_URL);
             }
         }
     }
