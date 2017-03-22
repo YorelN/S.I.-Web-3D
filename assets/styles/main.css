@@ -367,7 +367,7 @@ input {
 
 
 input[type=search] {
-    background: url(../../../Pictos/search.svg) no-repeat 15px center;
+    background: url(../img-layout/Pictos/search.svg) no-repeat 15px center;
     background-size: 20px;
     border: solid 1px #ddd;
     padding: 9px 10px 9px 32px;

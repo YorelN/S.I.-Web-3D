@@ -2,7 +2,7 @@
     <ul>
         <li class="onglet">
             <a href="#">
-                <img src="../Pictos/body.svg" alt="picto_accueil">
+                <img src="../assets/img-layout/Pictos/body.svg" alt="picto_accueil">
                 <span>
                     Anatomie
                 </span>
@@ -11,7 +11,7 @@
 
         <li class="onglet">
             <a href="#">
-                <img src="../Pictos/search.svg" alt="picto_accueil">
+                <img src="../assets/img-layout/Pictos/search.svg" alt="picto_accueil">
                 <span>
                     Rechercher
                 </span>
@@ -20,7 +20,7 @@
 
         <li class="onglet">
             <a href="#">
-                <img src="../Pictos/home.svg" alt="picto_accueil">
+                <img src="../assets/img-layout/Pictos/home.svg" alt="picto_accueil">
                 <span>
                     Accueil
                 </span>
@@ -29,7 +29,7 @@
 
         <li class="onglet">
             <a href="#">
-                <img src="../Pictos/favoris.svg" alt="picto_accueil">
+                <img src="../assets/img-layout/Pictos/favoris.svg" alt="picto_accueil">
                 <span>
                     Favoris
                 </span>
@@ -38,7 +38,7 @@
 
         <li class="onglet">
             <a href="#">
-                <img src="../Pictos/organisaio.svg" alt="picto_accueil">
+                <img src="../assets/img-layout/Pictos/organisaio.svg" alt="picto_accueil">
                 <span>
                     Organisation
                 </span>
