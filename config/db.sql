@@ -1,5 +1,6 @@
+
 --
--- Table structure for table `cours`
+-- Structure de la table `cours`
 --
 
 CREATE TABLE `cours` (
@@ -8,10 +9,10 @@ CREATE TABLE `cours` (
   `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `mat_id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `cours`
+-- Contenu de la table `cours`
 --
 
 INSERT INTO `cours` (`id`, `name`, `content`, `mat_id`, `tag_id`) VALUES
@@ -24,7 +25,7 @@ INSERT INTO `cours` (`id`, `name`, `content`, `mat_id`, `tag_id`) VALUES
 (7, 'Cours de pharma 1', 'Le cours de pharma 1', 1, 4),
 (8, 'Cours pharma 2', 'Le cours de pharma 2', 1, 4),
 (9, 'anatomie des poumons', 'les poumons sont propres', 1, 5),
-(10, 'Les pouons et l''anatomie', 'Les poumons sont sales', 1, 5),
+(10, 'Les pouons et l\'anatomie', 'Les poumons sont sales', 1, 5),
 (11, 'Coeurs arteres', 'Les arteres vides haha', 1, 6),
 (12, 'Coeurs cours numero 2', 'Le cours sur le coeur, jamais jaurai cru haha', 1, 6),
 (13, 'medicament cours 1', 'Le cours sur les medicaments lol éé', 1, 7),
@@ -33,7 +34,26 @@ INSERT INTO `cours` (`id`, `name`, `content`, `mat_id`, `tag_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `history`
+-- Structure de la table `favoris`
+--
+
+CREATE TABLE `favoris` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `cours_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Contenu de la table `favoris`
+--
+
+INSERT INTO `favoris` (`id`, `user_id`, `cours_id`) VALUES
+(3, 12, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `history`
 --
 
 CREATE TABLE `history` (
@@ -46,16 +66,16 @@ CREATE TABLE `history` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `matiere`
+-- Structure de la table `matiere`
 --
 
 CREATE TABLE `matiere` (
   `id` int(11) NOT NULL,
   `name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `matiere`
+-- Contenu de la table `matiere`
 --
 
 INSERT INTO `matiere` (`id`, `name`) VALUES
@@ -67,16 +87,16 @@ INSERT INTO `matiere` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tags`
+-- Structure de la table `tags`
 --
 
 CREATE TABLE `tags` (
   `id` int(11) NOT NULL,
   `name` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tags`
+-- Contenu de la table `tags`
 --
 
 INSERT INTO `tags` (`id`, `name`) VALUES
@@ -94,7 +114,7 @@ INSERT INTO `tags` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Structure de la table `users`
 --
 
 CREATE TABLE `users` (
@@ -102,75 +122,86 @@ CREATE TABLE `users` (
   `mail` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `universite` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Contenu de la table `users`
 --
 
 INSERT INTO `users` (`id`, `mail`, `password`, `universite`) VALUES
 (12, 'admin@admin', '99adc231b045331e514a516b4b7680f588e3823213abe901738bc3ad67b2f6fcb3c64efb93d18002588d3ccc1a49efbae1ce20cb43df36b38651f11fa75678e8', 'univ');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables exportées
 --
 
 --
--- Indexes for table `cours`
+-- Index pour la table `cours`
 --
 ALTER TABLE `cours`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `history`
+-- Index pour la table `favoris`
+--
+ALTER TABLE `favoris`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `history`
 --
 ALTER TABLE `history`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `matiere`
+-- Index pour la table `matiere`
 --
 ALTER TABLE `matiere`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tags`
+-- Index pour la table `tags`
 --
 ALTER TABLE `tags`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Index pour la table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT for table `cours`
+-- AUTO_INCREMENT pour la table `cours`
 --
 ALTER TABLE `cours`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
--- AUTO_INCREMENT for table `history`
+-- AUTO_INCREMENT pour la table `favoris`
+--
+ALTER TABLE `favoris`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT pour la table `history`
 --
 ALTER TABLE `history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `matiere`
+-- AUTO_INCREMENT pour la table `matiere`
 --
 ALTER TABLE `matiere`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `tags`
+-- AUTO_INCREMENT pour la table `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
