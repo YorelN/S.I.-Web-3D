@@ -11,7 +11,8 @@
 </head>
 <body id="home">
 
-<div>
+
+<div class="clearfix">
     <h1>Medecine_App</h1>
     <div class="category">Anatomie</div>
     <div class="category">Rechercher</div>
