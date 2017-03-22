@@ -10,7 +10,6 @@ class UserModel extends Model
             Message::setMsg('Un compte a déjà été crée avec cet adresse e-mail', "error");
             return;
         } else if ($_POST['submit']) {
-
             if ($_POST['password'] == '' || $_POST['mail'] == '' || $_POST['universite'] == '') {
                 Message::setMsg("Merci de remplir tous les champs", "error");
                 return;
@@ -63,7 +62,7 @@ class UserModel extends Model
                 $_SESSION['mail'] = $row['mail'];
                 $_SESSION['logged_in'] = true;
                 // $_SESSION['name'] = $row['name'];
-                header('Location : ' . ROOT_URL);
+                header('Location: ' . ROOT_URL);
             }
         }
     }

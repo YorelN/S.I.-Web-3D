@@ -57,12 +57,12 @@ a {
 }
 
 #home {
-    background: url("../../../img-layout/leo_vinci.jpg") fixed no-repeat;
+    background: url("../img-layout/leo_vinci.jpg") fixed no-repeat;
     background-size: cover;
 }
 
 #login {
-    background: url("../../../img-layout/university.jpg") no-repeat fixed;
+    background: url("../img-layout/university.jpg") no-repeat fixed;
     background-size: cover;
 
 }
@@ -399,9 +399,8 @@ input {
 }
 
 
-
 input[type=search] {
-    background: url(../../../img-layout/Pictos/search.svg) no-repeat 15px center;
+    background: url(../img-layout/Pictos/search.svg) no-repeat 15px center;
     background-size: 20px;
     border: solid 1px #ddd;
     padding: 9px 10px 9px 32px;
