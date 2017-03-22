@@ -44,6 +44,14 @@ class CourseModel extends Model
       }
     }
 
+    public function articles()
+    {
+        if ($_GET['id'] != '')
+        {
+            echo $_GET['id'];
+        }
+    }
+
     private function exists($user, $cours)
     {
         $stmt = $this->_db->prepare('SELECT COUNT(*) FROM `favoris` WHERE `user_id` = :user AND `cours_id` = :cours');
