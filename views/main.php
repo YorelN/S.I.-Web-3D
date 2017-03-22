@@ -26,10 +26,3 @@
 </body>
 </html>
 
-<?php
-//foreach ($viewmodel as $item): ?>
-<!--    <div>-->
-<!--        <h2>--><?//=$item['name']?><!--</h2>-->
-<!--        <p>--><?//=$item['contenu']?><!--</p>-->
-<!--    </div>-->
-<?php //endforeach; ?>

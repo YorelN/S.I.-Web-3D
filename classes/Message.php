@@ -14,10 +14,10 @@ class Message
     public static function display()
     {
         if (isset($_SESSION['errorMsg'])) {
-            echo "<div class='alert alert-danger'>".$_SESSION["errorMsg"]."</div>";
+            echo "<div class='msg-danger'>".$_SESSION["errorMsg"]."</div>";
             unset($_SESSION['errorMsg']);
         } else if (isset($_SESSION['successMsg'])) {
-            echo "<div class='alert alert-success'>".$_SESSION["successMsg"]."</div>";
+            echo "<div class='msg-success'>".$_SESSION["successMsg"]."</div>";
             unset($_SESSION['successMsg']);
         }
     }
