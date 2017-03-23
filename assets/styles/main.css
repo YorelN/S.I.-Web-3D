@@ -80,7 +80,6 @@ a {
 
 
 .login .blue_btn {
-    border-radius: 33px;
     display: inline-block;
 }
 
@@ -147,7 +146,6 @@ input:focus {
     transition: 0.25s;
     display: block;
     width: 100%;
-    margin: 5% auto;
     border-radius: 0;
 
 }
