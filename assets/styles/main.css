@@ -399,6 +399,7 @@ input:focus {
     font-family: 'Dosis', sans-serif;
     font-size: 1.6rem;
     padding: 2% 0;
+    width: 90%;
 }
 
 .article span {
@@ -492,7 +493,9 @@ input[type="search"] {
 .tag {
     width: 45%;
     margin: 0 5%;
-    float: right;
+    position: fixed;
+    right: 3%;
+    top: 25%;
 }
 
 
@@ -916,6 +919,11 @@ table {
         margin: 0 auto;
     }
 
+    .tag {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+    }
 
 }
 
@@ -926,6 +934,7 @@ table {
     .tag {
         width: 90%;
         margin: 0 auto;
+        position: relative;
     }
 
     .search_result {
