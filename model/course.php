@@ -2,22 +2,21 @@
 
 class CourseModel extends Model
 {
-
+    // Action Search du  model, recupere id nom et couleur des tags
+    // sert à charger les tags présents dans la BDD
     public function search()
     {
         $sql = "SELECT `id`, `name`, `color` as tag_color FROM `tags`";
         $this->_stmt = $this->_db->prepare($sql);
         $rows = $this->resultSet();
+        // retourne un json pour exploiter l'architecture en JS
         return json_encode($rows);
     }
 
+    // API permettant de récupérer les cours correspondants aux clicks sur les tags dans la page
+    // recherche
     public function api()
     {
-//        if (!isset($_SESSION['logged_in'])) {
-//            Message::setMsg("Vous devez être connecté pour accéder aux cours.","error");
-//            header("Location: ".ROOT_URL."users/login");
-//        }
-
         if ($_POST['tag']) {
             $sql = "SELECT cours.id as id, cours.name as name, cours.content as content, tags.name as tag, tags.id as tag_id, tags.color as tag_color FROM `cours` INNER JOIN `tags` ON cours.tag_id = tags.id WHERE tags.name = :tags";
             $this->_stmt = $this->_db->prepare($sql);
@@ -25,11 +24,12 @@ class CourseModel extends Model
             $rows = $this->resultSet();
             echo json_encode($rows);
         }
-
     }
+
 
     public function addfavoris()
     {
+      //
       if (isset($_POST['cours']) && isset($_POST['user'])) {
         if ($this->exists($_POST['user'], $_POST['cours'])) {
           echo "delete";
@@ -104,6 +104,8 @@ class CourseModel extends Model
         return (bool) $stmt->fetchColumn();
     }
 
+    // Function pour ajouter dans l'historique, sert lorsqu'un utilisateur voit un article,
+    // Cet article est directement repertorié dans l'historique de la section Espace perso
     private function add_history()
     {
         if (!$this->exists_in_history($_SESSION['id'],$_GET['id'])) {
