@@ -579,12 +579,15 @@ input[type="search"] {
     overflow: hidden;
 }
 
-
+.autres_articles {
+    float: right;
+    width: 35%;
+    margin: 0 auto;
+}
 
 .article_lies {
-    width: 35%;
+    width: 90%;
     margin: 2% 1%;
-    float: right;
     position: relative;
     line-height: 22px;
 }
@@ -682,8 +685,6 @@ input[type="search"] {
     margin: 5% 5%;
     position: fixed;
     right: 5%;
-
-
 }
 
 
@@ -847,6 +848,16 @@ table {
     width: 42%;
     margin: 0 auto;
 }
+
+.msg-danger {
+    font-family: 'Open sans', sans-serif;
+    color: #ee0000;
+}
+
+.msg-success {
+    font-family: 'Open sans', sans-serif;
+    color: #6AC662;
+}
 /*  =====================    //  RESPONSIVE  //    ================================   */
 
 
@@ -933,6 +944,17 @@ table {
         position: relative;
     }
 
+    .details_article {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .article_lies {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
 }
 
 
@@ -958,7 +980,7 @@ table {
     #calendar {
         display: block;
         width: 100%;
-        margin: 0;
+        margin: 5% auto;
         position: inherit;
     }
 
@@ -976,5 +998,13 @@ table {
         margin: 1% auto;
     }
 
+    .details_article {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .article_lies {
+        width: 90%;
+        margin: 0 auto;
+    }
 
 }
