@@ -334,7 +334,7 @@ input:focus {
     margin: 0 auto;
 }
 .onglet:nth-child(3) img {
-    width: 98px;
+    width: 146px;
     margin: 0 auto;
 }
 .onglet:nth-child(4) img {
@@ -482,7 +482,7 @@ input[type="search"] {
 
 
 .red_tag {
-    background: red;
+    background: #ee0000;
     font-family: 'Dosis', sans-serif;
     padding: 1% 3%;
     border-radius: 33px;
@@ -494,7 +494,7 @@ input[type="search"] {
 }
 
 .blue_tag {
-    background: #0072ff;
+    background: #1490FF;
     font-family: 'Dosis', sans-serif;
     padding: 1% 3%;
     border-radius: 33px;
@@ -506,7 +506,19 @@ input[type="search"] {
 }
 
 .green_tag {
-    background: #00e11a;
+    background: #6AC662;
+    font-family: 'Dosis', sans-serif;
+    padding: 1% 3%;
+    border-radius: 33px;
+    width: auto;
+    text-align: center;
+    color: white;
+    float: left;
+    margin: 1% 2%;
+}
+
+.yellow_tag {
+    background: #ffc100;
     font-family: 'Dosis', sans-serif;
     padding: 1% 3%;
     border-radius: 33px;
@@ -518,7 +530,7 @@ input[type="search"] {
 }
 
 .purple_tag {
-    background: #cc00ff;
+    background: #9000B3;
     font-family: 'Dosis', sans-serif;
     padding: 1% 3%;
     border-radius: 33px;
