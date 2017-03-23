@@ -19,7 +19,7 @@
     <h1>Historique</h1><article class="article">
 
     <?php foreach ($viewmodel as $item): ?>
-
+    <article class="article">
         <h2><?=$item['cours_name']?></h2>
         <p><?=$item['cours_content']?></p>
     </article>
