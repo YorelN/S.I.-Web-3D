@@ -16,7 +16,7 @@
     <section id="a_propos">
         <div><img src="../assets/img-layout/Pictos/doctorapp.svg" alt=""></div>
         <h4>Doctor'App, la solution #1 pour les futurs professionnels de la santé</h4>
-        <p>Parcourez de nombreux cours accompagné d'une modélisation en 3D inédite</p>
+        <p>Parcourez de nombreux cours accompagné d'une modélisation en 3D inédite pour une meilleur compréhension du corp humain</p>
         <div class="link">
             <a href="" class="blue_btn">Inscription</a>
             <a href="" class="green_btn">Connexion</a>
