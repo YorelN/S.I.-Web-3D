@@ -20,7 +20,7 @@
 
         <li class="onglet">
             <a href="#">
-                <img src="../assets/img-layout/Pictos/home.svg" alt="picto_accueil">
+                <img src="../assets/img-layout/Pictos/doctorapp.svg" alt="picto_accueil">
                 <span>
                     Accueil
                 </span>

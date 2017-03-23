@@ -73,11 +73,26 @@ a {
 
 /*  =====================    //  LOGIN  //    ================================   */
 
+.logo img {
+    width: 50%;
+    margin: 2% auto;
+}
 
 
+.login .blue_btn {
+    border-radius: 33px;
+    width: 49.5%;
+    display: inline-block;
+}
+
+.login .red_btn {
+    border-radius: 33px;
+    width: 49%;
+    display: inline-block;
+}
 
 .login {
-    margin: 20vh auto;
+    margin: 2vh auto;
     width: 40vh;
 }
 .login-screen {
@@ -121,7 +136,7 @@ input:focus {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     letter-spacing: 2px;
-    background: #0072ff;
+    background: #1490ff;
     color: #ffffff;
     font-size: 16px;
     line-height: 25px;
@@ -139,11 +154,10 @@ input:focus {
 
 }
 
-.gray_btn {
+.green_btn {
     border: 2px solid transparent;
     font-family: 'Dosis', sans-serif;
-    font-weight: 500;
-    background: #c4cacb;
+    background: #6AC662;
     color: #ffffff;
     font-size: 16px;
     line-height: 25px;
@@ -156,12 +170,13 @@ input:focus {
     border-radius: 0;
     letter-spacing: 2px;
     cursor: pointer;
+    font-weight: 400;
 }
 
 .red_btn {
     border: 2px solid transparent;
     font-family: 'Dosis', sans-serif;
-    font-weight: 800;
+    font-weight: 400;
     background: #ee0000;
     color: #ffffff;
     font-size: 16px;
@@ -175,7 +190,7 @@ input:focus {
     box-shadow: none;
     transition: 0.25s;
     display: block;
-    width: 40vh;
+    width: 50%;
     margin: 0 auto;
     border-radius: 33px;
 }
@@ -319,7 +334,7 @@ input:focus {
     margin: 0 auto;
 }
 .onglet:nth-child(3) img {
-    width: 29px;
+    width: 98px;
     margin: 0 auto;
 }
 .onglet:nth-child(4) img {
@@ -432,7 +447,9 @@ input[type=search] {
 }
 
 
-
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
 
 /*  =====================    //  SEARCH  //    ================================   */
 
