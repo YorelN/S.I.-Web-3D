@@ -7,11 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../assets/styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis:100,300,400,500,700" rel="stylesheet">
-
-    <title>Organisation</title>
+    <meta property="og:image"              content="http://vivianebadach.eu/doctorapp/doctorapp.svg" />
+<!--    <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />-->
+    <title>Espace Personnel</title>
 </head>
 <body>
+<div id="fb-root"></div>
 
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 <?php require "includes/nav_bar.php"?>
 
 <section id="calendar">
@@ -92,11 +101,18 @@
 </section>
 
 <section id="historique">
+    <h2 style="font-size: 36px;">Progression dans les cours</h2>
+    
+    <div style="width: 100%; height: 20px; background: #EF0000;margin-bottom: 40px; border-radius: 10px;position: relative;">
+        <div style="width: <?=$viewmodel['width']?>%; height: 20px; background: #6AC761; border-radius: 10px;"></div>
+        <p style="position: absolute;top: 2px;left: <?=$viewmodel['width'] - 6?>%;"><?=$viewmodel['width']?>%</p>
+    </div>
+    <div class="fb-share-button" data-href="http://vivianebadach.eu/doctorapp" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fvivianebadach.eu%2F&amp;src=sdkpreparse">Partager</a></div>
 
-    <h1>Historique</h1>
+    <h1 style="font-size: 36px;margin-top: 10px;">Historique</h1>
 
-    <?php foreach ($viewmodel as $item): ?>
-        <article class="article">
+    <?php foreach ($viewmodel['history'] as $item): ?>
+        <article class="article" style="margin: 25px auto;">
             <a href="<?=ROOT_URL . 'courses/articles/' . $item['cours_id']?>">
                 <h2><?=$item['cours_name']?></h2>
                 <p><?=$item['cours_content']?></p>

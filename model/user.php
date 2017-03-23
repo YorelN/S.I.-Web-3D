@@ -86,7 +86,22 @@ class UserModel extends Model
         $this->_stmt->bindValue(':id', $_SESSION['id']);
         $this->_stmt->execute();
         $row = $this->_stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $row;
+
+        $stmt = $this->_db->prepare('SELECT COUNT(*) FROM `cours`');
+        $stmt->execute();
+        $roow = $stmt->fetchColumn();
+
+        $stmt_progress = $this->_db->prepare('SELECT COUNT(*) FROM `history` WHERE user_id = :id');
+        $stmt_progress->bindValue(':id', $_SESSION['id']);
+        $stmt_progress->execute();
+        $rows = $stmt_progress->fetchColumn();
+
+        $row_final['history'] = $row;
+        $row_final['total'] = $roow;
+        $row_final['count'] = $rows;
+        $row_final['width'] = (int) ($rows / $roow * 100);
+
+        return $row_final;
     }
 
     public function favoris()
