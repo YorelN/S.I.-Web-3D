@@ -90,7 +90,7 @@
     var aside = document.querySelector('.tag');
     var lis = [];
     var tags_to_show = <?=$viewmodel?>;
-    var classes_array = ['blue_tag', 'green_tag', 'purple_tag', 'red_tag'];
+    var classes_array = ['blue_tag', 'green_tag', 'purple_tag', 'red_tag', 'yellow_tag'];
     render_tags();
 
 
@@ -136,13 +136,17 @@
                 '<a href="<?=ROOT_URL?>courses/articles/'+ articles[i].id +'">' +
                     '<h2>'+articles[i].name+'</h2>' + '</a>' +
                     '<p>'+articles[i].content+'</p>' +
-                    '<i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>'
+                    '<i><img src="../assets/img-layout/Pictos/unstar.svg" alt=""></i>'
                 ;
             article.classList.add(new_articles);
             app.appendChild(article);
             article.querySelector("i").addEventListener('click', function() {
-
-              loadF(articles[i].id,<?=$_SESSION['id']?>,"<?=ROOT_URL.'courses/addfavoris'?>");
+                if (this.querySelector('img').src == 'http://localhost:8888/medical/assets/img-layout/Pictos/unstar.svg') {
+                    this.querySelector('img').src = 'http://localhost:8888/medical/assets/img-layout/Pictos/star.svg';
+                } else {
+                    this.querySelector('img').src = 'http://localhost:8888/medical/assets/img-layout/Pictos/unstar.svg';
+                }
+                loadF(articles[i].id,<?=$_SESSION['id']?>,"<?=ROOT_URL.'courses/addfavoris'?>");
             });
         }
     }
@@ -150,7 +154,7 @@
     function render_tags()
     {
         for (let i = 0; i < tags_to_show.length; i++) {
-            var random = Math.floor(Math.random() * 4);
+            var random = Math.floor(Math.random() * 5);
             let div_tag = document.createElement('div');
             div_tag.innerHTML = tags_to_show[i].name;
             div_tag.className = classes_array[random];
