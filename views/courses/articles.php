@@ -56,7 +56,7 @@
                         break;
                 }
             });
-            u.initPlugin(jQuery("#unityPlayer")[0], "../EssaiPlugin/EssaiPlugin.unity3d");
+            u.initPlugin(jQuery("#unityPlayer")[0], "EssaiPlugin/EssaiPlugin.unity3d");
         });
         -->
     </script>
