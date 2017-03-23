@@ -190,7 +190,7 @@ input:focus {
     box-shadow: none;
     transition: 0.25s;
     display: block;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     border-radius: 33px;
 }
