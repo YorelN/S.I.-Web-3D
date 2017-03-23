@@ -16,7 +16,7 @@
 
 <section id="historique">
 
-    <h1>Historique</h1><article class="article">
+    <h1>Historique</h1>
 
     <?php foreach ($viewmodel as $item): ?>
     <article class="article">
