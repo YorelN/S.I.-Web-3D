@@ -579,12 +579,15 @@ input[type="search"] {
     overflow: hidden;
 }
 
-
+.autres_articles {
+    float: right;
+    width: 35%;
+    margin: 0 auto;
+}
 
 .article_lies {
-    width: 35%;
+    width: 90%;
     margin: 2% 1%;
-    float: right;
     position: relative;
     line-height: 22px;
 }
@@ -849,6 +852,11 @@ table {
 .msg-danger {
     font-family: 'Open sans', sans-serif;
     color: #ee0000;
+}
+
+.msg-success {
+    font-family: 'Open sans', sans-serif;
+    color: #6AC662;
 }
 /*  =====================    //  RESPONSIVE  //    ================================   */
 
