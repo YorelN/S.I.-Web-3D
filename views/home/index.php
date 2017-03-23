@@ -113,7 +113,6 @@
     <script type="text/javascript">
         var app = document.querySelector('.app');
         var articles = <?=$viewmodel?>;
-        var classes_array = ['blue_tag', 'green_tag', 'purple_tag', 'red_tag', 'yellow_tag'];
         render();
 
         function render()
@@ -126,11 +125,9 @@
                     '<h2>'+articles[i].name+'</h2>' + '</a>' +
                     '<p>'+articles[i].content+'</p>' +
                     '<i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>' +
-                    '<div>'+ articles[i].tag +'</div>'
+                    '<div class="' + articles[i].tag_color + '_tag">'+ articles[i].tag +'</div>'
                 ;
                 app.appendChild(article);
-                var random = Math.floor(Math.random() * 5);
-                article.querySelector('div').className = classes_array[random];
                 article.querySelector("i").addEventListener('click', function() {
                     if (this.querySelector('img').src == 'http://localhost:8888/medical/assets/img-layout/Pictos/unstar.svg') {
                         this.querySelector('img').src = 'http://localhost:8888/medical/assets/img-layout/Pictos/star.svg';
