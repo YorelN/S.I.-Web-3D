@@ -74,13 +74,14 @@ a {
 /*  =====================    //  LOGIN  //    ================================   */
 
 .logo img {
-    width: 50%;
+    width: 100%;
     margin: 2% auto;
 }
 
 
 .login .blue_btn {
     display: inline-block;
+    margin: 0;
 }
 
 .login .red_btn {
@@ -375,7 +376,7 @@ input:focus {
     width: 90%;
     margin: 5% auto -2% auto;
     background: white;
-    padding: 4%;
+    padding: 2%;
     line-height: 33px;
     border-radius: 6px;
     font-size: 22px;
@@ -385,8 +386,8 @@ input:focus {
 
 .article h2 {
     font-family: 'Dosis', sans-serif;
-    font-size: 1.7rem;
-    padding: 2% 0 0 0;
+    font-size: 1.6rem;
+    padding: 2% 0;
 }
 
 .article span {
@@ -755,12 +756,6 @@ table {
 
 
 
-
-
-
-/*  =====================    //  FAVORIS  //    ================================   */
-
-
 /*  =====================    //  RESPONSIVE  //    ================================   */
 
 
@@ -786,14 +781,14 @@ table {
 
     #login .article i img {
         position: absolute;
-        top: 13%;
+        top: 5%;
 
     }
 
     #nav_bar {
         position: fixed;
         top: 0;
-        height: 60px;
+        height: 54px;
     }
 
     #login nav.clearfix {
@@ -803,4 +798,13 @@ table {
         z-index: 22;
     }
 
+    .logo img {
+        width: 50%;
+        margin: 2% auto;
+    }
+
+    .onglet:nth-child(3) img {
+        width: 146px;
+        margin: 0 auto;
+    }
 }

@@ -29,6 +29,7 @@
             <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
             <address>Auteur: Ada Lovelace </address>
             <i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>
+            <div class="blue_tag">Poumon</div>
         </article>
 
         <article class="article">
@@ -37,6 +38,8 @@
             <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
             <address>Auteur: Ada Lovelace </address>
             <i><img src="../assets/img-layout/Pictos/unstar.svg" alt=""></i>
+            <div class="red_tag">cardio</div>
+
         </article>
 
         <article class="article">
