@@ -6,7 +6,7 @@
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../assets/styles/main.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Dosis:100,300,400,500,700" rel="stylesheet">
     <title>Favoris</title>
 </head>
 <body id="login">
