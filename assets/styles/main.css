@@ -138,7 +138,7 @@ input:focus {
 
 .blue_btn {
     border: 2px solid transparent;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-weight: 300;
     letter-spacing: 2px;
     background: #1490ff;
@@ -360,7 +360,7 @@ input:focus {
 
 
 .onglet span {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Open sans', sans-serif;
     font-size: 0.8em;
     text-align: center;
     color: black;
@@ -378,7 +378,7 @@ input:focus {
     float: left;
     color: black;
     display: block;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Open sans', sans-serif;
 }
 
 .notActive {
@@ -409,20 +409,20 @@ input:focus {
 }
 
 .article span {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Open sans', sans-serif;
     opacity: 0.4;
     padding: 0;
     font-size: 0.8rem;
 }
 
 .article p {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Open sans', sans-serif;
     padding: 2% 0 2% 5%;
     margin: 1rem auto;
 }
 
 .article address {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Open sans', sans-serif;
     opacity: 0.4;
     font-size: 0.8rem;
 }
@@ -586,12 +586,12 @@ input[type="search"] {
     margin: 2% 1%;
     float: right;
     position: relative;
-    font-family: 'Dosis', sans-serif;
     line-height: 22px;
 }
 
 .article_lies p {
     margin: 2% 0;
+    font-family: 'Open sans', sans-serif;
 }
 
 .article_lies span,address {
@@ -601,6 +601,8 @@ input[type="search"] {
 
 .article_lies h2 {
     padding: 1%;
+    font-family: 'Dosis', sans-serif;
+
 }
 
 .article_h2 {
@@ -634,14 +636,14 @@ input[type="search"] {
 }
 
 .details_article p {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Open sans', sans-serif;
     font-weight: 200;
     line-height: 33px;
     font-size: 22px;
 }
 
 .details_article span {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Open sans', sans-serif;
     opacity: 0.4;
     padding: 0;
     font-size: 0.8rem;
@@ -817,7 +819,7 @@ table {
 }
 
 #a_propos p {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Open sans', sans-serif;
     font-size: 1.3rem;
     font-weight: 400;
     text-align: center;
