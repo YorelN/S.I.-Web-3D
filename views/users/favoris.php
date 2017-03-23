@@ -61,9 +61,11 @@
             article.classList.add('article');
             article.innerHTML =
                 '<a href="<?=ROOT_URL?>courses/articles/'+ articles[i].cours_id +'">' +
-                '<h2>'+articles[i].cours_name+'</h2>' + '</a>' +
-                '<p>'+articles[i].cours_content+'</p>' +
-                '<i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>'
+                    '<h2>'+articles[i].cours_name+'</h2>' +
+                    '<p>'+articles[i].cours_content+'</p>' +
+                '</a>' +
+                '<i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>' +
+                '<div class="'+articles[i].tag_color+'_tag">'+articles[i].tag_name+'</div>'
             ;
             app.appendChild(article);
             article.querySelector("i").addEventListener('click', function() {

@@ -20,9 +20,11 @@
 
     <?php foreach ($viewmodel as $item): ?>
     <article class="article">
-        <h2><?=$item['cours_name']?></h2>
-        <p><?=$item['cours_content']?></p>
-        <div class="<?=$item['tag_color']?>_tag"><?=$item['tag_name']?></div>
+        <a href="<?=ROOT_URL . 'courses/articles/' . $item['cours_id']?>">
+            <h2><?=$item['cours_name']?></h2>
+            <p><?=$item['cours_content']?></p>
+            <div class="<?=$item['tag_color']?>_tag"><?=$item['tag_name']?></div>
+        </a>
     </article>
 
     <?php endforeach; ?>
