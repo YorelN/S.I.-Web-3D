@@ -17,7 +17,7 @@
 <nav id="nav_bar">
     <ul>
         <li class="onglet">
-            <a href="<?=ROOT_URL . 'courses/logout'?>">
+            <a href="<?=ROOT_URL . 'users/logout'?>">
                 <img src="assets/img-layout/Pictos/deconnexion.svg" alt="picto deconnexion">
                 <span>
                     Deconnexion
@@ -53,7 +53,7 @@
             <a href="<?=ROOT_URL . 'users/organisation'?>">
                 <img src="assets/img-layout/Pictos/organisaio.svg" alt="picto organisation">
                 <span>
-                    Organisation
+                    Espace Personnel
                 </span>
             </a>
         </li>

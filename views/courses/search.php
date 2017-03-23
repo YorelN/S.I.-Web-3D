@@ -142,8 +142,9 @@
             article.classList.add('article');
             article.innerHTML =
                 '<a href="<?=ROOT_URL?>courses/articles/'+ articles[i].id +'">' +
-                    '<h2>'+articles[i].name+'</h2>' + '</a>' +
+                    '<h2>'+articles[i].name+'</h2>' +
                     '<p>'+articles[i].content+'</p>' +
+                    '</a>' +
                     '<i><img src="../assets/img-layout/Pictos/unstar.svg" alt=""></i>' +
                     '<div class="'+articles[i].tag_color+'_tag">' + articles[i].tag +'</div>'
                 ;

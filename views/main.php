@@ -1,28 +1,14 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <title>Page not found 404</title>
     <link rel="stylesheet" href="assets/styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-    <title>Accueil</title>
 </head>
-<body id="home">
-
-<?php if (isset($_SESSION['logged_in'])): ?>
-<div>
-    <h1>Medecine_App</h1>
-    <div class="category">Anatomie</div>
-    <div class="category">Rechercher</div>
-    <div class="category">Favoris</div>
-    <div class="category">Articles</div>
-    <div class="category">Organisation</div>
-</div>
-<?php else: ?>
-<div>Connectez vous : <a href="<?=ROOT_URL.'users/login'?>">Ici !</a></div>
-<?php endif; ?>
+<body>
+<?php require "includes/nav_bar.php"?>
+    <h1 class="oops">Oops... Cette page n'existe pas!</h1>
+    <a href="home" class="tohome">Retourner à l'acceuil</a>
+    <img src="assets/img-layout/404.png" alt="" class="notfound">
 </body>
 </html>
-
