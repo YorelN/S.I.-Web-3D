@@ -66,15 +66,7 @@
 </nav>
 
 
-<section>
-  <?php foreach ($viewmodel as $item): ?>
-    <article class="article">
-        <h2><?=$item['name']?></h2>
-        <p><?=$item['content']?></p>
-        <i><img src="assets/img-layout/Pictos/star.svg" alt=""></i>
-    </article>
-
-  <?php endforeach; ?>
+<section class="app">
 
 
     <!-- <article class="article">
@@ -118,6 +110,52 @@
     </article>
 </section> -->
 
+    <script type="text/javascript">
+        var app = document.querySelector('.app');
+        var articles = <?=$viewmodel?>;
+        var classes_array = ['blue_tag', 'green_tag', 'purple_tag', 'red_tag', 'yellow_tag'];
+        render();
 
+        function render()
+        {
+            for (let i = 0; i < articles.length; i++) {
+                let article = document.createElement('article');
+                article.classList.add('article');
+                article.innerHTML =
+                    '<a href="<?=ROOT_URL?>courses/articles/'+ articles[i].id +'">' +
+                    '<h2>'+articles[i].name+'</h2>' + '</a>' +
+                    '<p>'+articles[i].content+'</p>' +
+                    '<i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>' +
+                    '<div>'+ articles[i].tag +'</div>'
+                ;
+                app.appendChild(article);
+                var random = Math.floor(Math.random() * 5);
+                article.querySelector('div').className = classes_array[random];
+                article.querySelector("i").addEventListener('click', function() {
+                    if (this.querySelector('img').src == 'http://localhost:8888/medical/assets/img-layout/Pictos/unstar.svg') {
+                        this.querySelector('img').src = 'http://localhost:8888/medical/assets/img-layout/Pictos/star.svg';
+                    } else {
+                        this.querySelector('img').src = 'http://localhost:8888/medical/assets/img-layout/Pictos/unstar.svg';
+                    }
+
+                    loadF(articles[i].id,<?=$_SESSION['id']?>,"<?=ROOT_URL.'courses/addfavoris'?>");
+                });
+            }
+        }
+
+        function loadF(objet,objet2, page)
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", page, true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+                    console.log(xhr.response);
+                }
+            };
+            xhr.send('cours=' + objet +"&user="+objet2);
+        }
+
+    </script>
 </body>
 </html>
