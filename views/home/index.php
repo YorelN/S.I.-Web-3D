@@ -6,7 +6,7 @@
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/styles/main.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Dosis:100,300,400,500,700" rel="stylesheet">
     <title>Articles</title>
 </head>
 
@@ -17,10 +17,10 @@
 <nav id="nav_bar">
     <ul>
         <li class="onglet">
-            <a href="<?=ROOT_URL . 'courses/anatomie'?>">
-                <img src="assets/img-layout/Pictos/body.svg" alt="picto anatomie">
+            <a href="<?=ROOT_URL . 'courses/logout'?>">
+                <img src="assets/img-layout/Pictos/deconnexion.svg" alt="picto deconnexion">
                 <span>
-                    Anatomie
+                    Deconnexion
                 </span>
             </a>
         </li>
@@ -75,8 +75,9 @@
                 article.classList.add('article');
                 article.innerHTML =
                     '<a href="<?=ROOT_URL?>courses/articles/'+ articles[i].id +'">' +
-                    '<h2>'+articles[i].name+'</h2>' + '</a>' +
+                    '<h2>'+articles[i].name+'</h2>' +
                     '<p>'+articles[i].content+'</p>' +
+                    '</a>' +
                     '<i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>' +
                     '<div class="' + articles[i].tag_color + '_tag">'+ articles[i].tag +'</div>'
                 ;
