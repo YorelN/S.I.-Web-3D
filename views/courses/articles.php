@@ -56,7 +56,7 @@
                         break;
                 }
             });
-            u.initPlugin(jQuery("#unityPlayer")[0], "EssaiPlugin/EssaiPlugin.unity3d");
+            u.initPlugin(jQuery("#unityPlayer")[0], "../../EssaiPlugin/Hippocrapp.unity3d");
         });
         -->
     </script>
@@ -118,12 +118,56 @@
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="assets/styles/main.css">
+        <link rel="stylesheet" href="../../assets/styles/main.css">
 
 </head>
 
 <body>
-<?php require "includes/nav_bar.php" ?>
+<nav id="nav_bar">
+    <ul>
+        <li class="onglet">
+            <a href="<?=ROOT_URL . 'courses/anatomie'?>">
+                <img src="../../assets/img-layout/Pictos/body.svg" alt="picto anatomie">
+                <span>
+                    Anatomie
+                </span>
+            </a>
+        </li>
+
+        <li class="onglet">
+            <a href="<?=ROOT_URL . 'courses/search'?>">
+                <img src="../../assets/img-layout/Pictos/search.svg" alt="picto search">
+                <span>
+                    Rechercher
+                </span>
+            </a>
+        </li>
+
+        <li class="onglet">
+            <a href="<?=ROOT_URL?>">
+                <img src="../../assets/img-layout/Pictos/doctorapp.svg" alt="picto accueil">
+            </a>
+        </li>
+
+        <li class="onglet">
+            <a href="<?=ROOT_URL . 'users/favoris'?>">
+                <img src="../../assets/img-layout/Pictos/favoris.svg" alt="picto favoris">
+                <span>
+                    Favoris
+                </span>
+            </a>
+        </li>
+
+        <li class="onglet">
+            <a href="<?=ROOT_URL . 'users/organisation'?>">
+                <img src="../../assets/img-layout/Pictos/organisaio.svg" alt="picto organisation">
+                <span>
+                    Organisation
+                </span>
+            </a>
+        </li>
+    </ul>
+</nav>
 
 <p class="header"><span>Unity Web Player | </span>Semaine intensive</p>
 <div class="content">
@@ -139,10 +183,11 @@
             </a>
         </div>
     </div>
+    <p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
 </div>
 
 <div class="add_revision">
-    <i><img src="../assets/img-layout/Pictos/revision.svg" alt="Organisation"></i>
+    <i><img src="../../assets/img-layout/Pictos/revision.svg" alt="Organisation"></i>
     <a href="#">Planifier des révisions</a>
 </div>
 
@@ -150,9 +195,9 @@
 
     <article>
 
-        <h1><?=$viewModel['name']?></h1>
+        <h1><?=$viewmodel['name']?></h1>
 
-        <p><?=$viewModel['content']?></p>
+        <p><?=$viewmodel['full_content']?></p>
 
     </article>
 </section>
@@ -177,7 +222,6 @@
 
 </aside>
 
-<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
 </body>
 </html>
 
