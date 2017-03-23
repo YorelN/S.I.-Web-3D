@@ -84,7 +84,8 @@
     </article>
 </section>
 
-<aside>
+<aside id="autres_articles">
+    <h2 class="article_h2">Article liés</h2>
     <article class="article_lies">
         <h2>Lorem Ipsum</h2>
         <span>Vendredi 13 Avril 2017 - 16:20</span>
@@ -92,7 +93,7 @@
         <address>Auteur: Ada Lovelace </address>
         <i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>
     </article>
-
+    <h2 class="article_h2">Autres articles</h2>
     <article class="article_lies">
         <h2>Lorem Ipsum</h2>
         <span>Vendredi 13 Avril 2017 - 16:20</span>

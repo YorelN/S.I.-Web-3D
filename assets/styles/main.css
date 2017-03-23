@@ -588,6 +588,12 @@ input[type="search"] {
     padding: 1%;
 }
 
+.article_h2 {
+    text-align: center;
+    padding: 5% 0 0 0;
+    font-size: 2rem;
+}
+
 .article_lies i img {
     width: 22px;
     position: absolute;
@@ -787,7 +793,7 @@ table {
     font-size: 2.5rem;
     font-weight: 400;
     text-align: center;
-    width: 70%;
+    width: 55%;
     margin: 3% auto;
 }
 
@@ -796,7 +802,7 @@ table {
     font-size: 1.3rem;
     font-weight: 400;
     text-align: center;
-    width: 70%;
+    width: 50%;
     margin: 3% auto;
 }
 
@@ -840,7 +846,7 @@ table {
     }
     #login section {
         width: 90%;
-        margin: 4% auto;
+        margin: 4% auto 0 auto;
     }
 
     #login .article i img {
