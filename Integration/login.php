@@ -14,27 +14,28 @@
 
 
 <main>
-    <div class="login">
-        <div class="login-screen">
-            <div class="app-title">
-                <a class="blue_btn" href="#">Inscription</a>
-            </div>
-            <form action="">
-                <div class="login-form">
-                    <div class="control-group">
-                        <input type="text" value="" placeholder="Identifiant" name="">
-                    </div>
-
-                    <div class="control-group">
-                        <input type="password" class="login-field" value="" placeholder="Mot de passe" name="" ">
-                    </div>
-                    <a href="#" class="forgot_mdp">Mot de passe oublié ?</a>
-                    <input type="submit" class="gray_btn">
+    <div class="logo"><img src="../assets/img-layout/Pictos/doctorapp.svg" alt=""></div>
+        <div class="login">
+            <div class="login-screen">
+                <div class="app-title">
                 </div>
-            </form>
+                <form action="">
+                    <div class="login-form">
+                        <div class="control-group">
+                            <input type="text" value="" placeholder="Identifiant" name="">
+                        </div>
+
+                        <div class="control-group">
+                            <input type="password" class="login-field" value="" placeholder="Mot de passe" name="" ">
+                        </div>
+                        <a href="#" class="forgot_mdp">Mot de passe oublié ?</a>
+                        <input type="submit" class="green_btn" value="Connexion">
+                    </div>
+                </form>
+            </div>
+            <a href="#" class="red_btn">Google +</a>
+            <a class="blue_btn" href="#">Inscription</a>
         </div>
-        <a href="#" class="red_btn">Google +</a>
-    </div>
 
 </main>
 </body>
