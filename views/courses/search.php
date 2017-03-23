@@ -88,11 +88,9 @@
     var tags = document.querySelector('.tags');
     var new_articles = '';
     var aside = document.querySelector('.tag');
-//    var loading = document.querySelector('.loading');
     var lis = [];
     var tags_to_show = <?=$viewmodel?>;
     var classes_array = ['blue_tag', 'green_tag', 'purple_tag', 'red_tag'];
-//    render();
     render_tags();
 
 
@@ -143,7 +141,7 @@
             article.classList.add(new_articles);
             app.appendChild(article);
             article.querySelector("i").addEventListener('click', function() {
-              
+
               loadF(articles[i].id,<?=$_SESSION['id']?>,"<?=ROOT_URL.'courses/addfavoris'?>");
             });
         }
