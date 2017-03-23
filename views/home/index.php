@@ -70,9 +70,7 @@
   <?php foreach ($viewmodel as $item): ?>
     <article class="article">
         <h2><?=$item['name']?></h2>
-        <span>Vendredi 13 Avril 2017 - 16:20</span>
         <p><?=$item['content']?></p>
-        <address>Auteur: Ada Lovelace </address>
         <i><img src="assets/img-layout/Pictos/star.svg" alt=""></i>
     </article>
 
