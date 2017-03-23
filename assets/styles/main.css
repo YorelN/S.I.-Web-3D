@@ -73,7 +73,32 @@ i {
 
 }
 
+/* 404 NOT FOUND */
+.notfound{
+    margin-left: 20%;
+    margin-top: 2%;
+}
 
+.tohome {
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+    margin-left: 46%;
+    color: skyBlue;
+    font-family: 'Dosis', sans-serif;
+}
+
+.oops {
+    text-align: center;
+    font-weight: bold;
+    font-size: 4.5rem;
+}
+
+.lol .blue_tag {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+}
 
 
 
@@ -339,7 +364,9 @@ input:focus {
     transition: 0.3s;
 }
 
-
+.onglet:nth-child(3) {
+    vertical-align: bottom;
+}
 
 .onglet:nth-child(2) img {
     width: 28px;
@@ -874,8 +901,8 @@ table {
         position: relative;
         display: inline-block;
         vertical-align: top;
-
     }
+
     #login section {
         width: 90%;
         margin: 4% auto 0 auto;
@@ -890,7 +917,7 @@ table {
     #nav_bar {
         position: fixed;
         top: 0;
-        height: 54px;
+        height:62px;
     }
 
     #login nav.clearfix {
@@ -995,9 +1022,14 @@ table {
 
     #login .article {
         width: 90%;
-        margin: 1% auto;
+        margin: 3% auto;
+        display: block;
     }
 
+
+    #login .article:first-child {
+        margin-top: 7rem;
+    }
     .details_article {
         width: 90%;
         margin: 0 auto;
