@@ -768,6 +768,7 @@ table {
         margin: 2% 1.5%;
         position: relative;
         display: inline-block;
+        vertical-align: top;
 
     }
     #login section {
