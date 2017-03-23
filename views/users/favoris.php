@@ -13,37 +13,6 @@
 <?php require "includes/nav_bar.php" ?>
 
 <section class="app">
-<!--    <article class="article">-->
-<!--        <h2>Lorem Ipsum</h2>-->
-<!--        <span>Vendredi 13 Avril 2017 - 16:20</span>-->
-<!--        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>-->
-<!--        <address>Auteur: Ada Lovelace </address>-->
-<!--        <i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>-->
-<!--    </article>-->
-<!---->
-<!--    <article class="article">-->
-<!--        <h2>Lorem Ipsum</h2>-->
-<!--        <span>Vendredi 13 Avril 2017 - 16:20</span>-->
-<!--        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>-->
-<!--        <address>Auteur: Ada Lovelace </address>-->
-<!--        <i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>-->
-<!--    </article>-->
-<!---->
-<!--    <article class="article">-->
-<!--        <h2>Lorem Ipsum</h2>-->
-<!--        <span>Vendredi 13 Avril 2017 - 16:20</span>-->
-<!--        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>-->
-<!--        <address>Auteur: Ada Lovelace </address>-->
-<!--        <i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>-->
-<!--    </article>-->
-<!---->
-<!--    <article class="article">-->
-<!--        <h2>Lorem Ipsum</h2>-->
-<!--        <span>Vendredi 13 Avril 2017 - 16:20</span>-->
-<!--        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>-->
-<!--        <address>Auteur: Ada Lovelace </address>-->
-<!--        <i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>-->
-<!--    </article>-->
 </section>
 
 
@@ -64,7 +33,7 @@
                     '<h2>'+articles[i].cours_name+'</h2>' +
                     '<p>'+articles[i].cours_content+'</p>' +
                 '</a>' +
-                '<i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>' +
+                '<i><img src="../assets/img-layout/Pictos/garbage.svg" alt=""></i>' +
                 '<div class="'+articles[i].tag_color+'_tag">'+articles[i].tag_name+'</div>'
             ;
             app.appendChild(article);
