@@ -49,7 +49,13 @@ class CourseModel extends Model
     {
         if ($_GET['id'] != '')
         {
-            echo $_GET['id'];
+            $sql = "SELECT `name`,`content` FROM `cours` WHERE `id` = :id";
+            $this->_stmt = $this->_db->prepare($sql);
+            $this->_stmt->bindValue(':id', htmlentities($_GET['id']));
+            $row = $this->resultSet();
+            var_dump($row);
+            die();
+            return $row;
         }
     }
 

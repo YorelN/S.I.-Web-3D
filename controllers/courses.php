@@ -24,4 +24,6 @@ class Courses extends Controller
         $viewmodel = new CourseModel();
         $this->returnView($viewmodel->articles(), false);
     }
+
+ 
 }
