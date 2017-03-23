@@ -28,7 +28,7 @@
                     </div>
                     <?php Message::display()?>
                     <a href="#" class="forgot_mdp">Mot de passe oublié ?</a>
-                    <input type="submit" class="gray_btn" name="submit" value="Valider">
+                    <input type="submit" class="green_btn" name="submit" value="Connexion">
                 </div>
             </form>
         </div>

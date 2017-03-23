@@ -33,9 +33,6 @@
         <li class="onglet">
             <a href="<?=ROOT_URL?>">
                 <img src="assets/img-layout/Pictos/doctorapp.svg" alt="picto accueil">
-                <span>
-                    Accueil
-                </span>
             </a>
         </li>
 
@@ -70,6 +67,26 @@
 
 
 <section>
+  <?php foreach ($viewmodel as $item): ?>
+    <article class="article">
+        <h2><?=$item['name']?></h2>
+        <span>Vendredi 13 Avril 2017 - 16:20</span>
+        <p><?=$item['content']?></p>
+        <address>Auteur: Ada Lovelace </address>
+        <i><img src="assets/img-layout/Pictos/star.svg" alt=""></i>
+    </article>
+
+  <?php endforeach; ?>
+
+
+    <!-- <article class="article">
+        <h2>Lorem Ipsum</h2>
+        <span>Vendredi 13 Avril 2017 - 16:20</span>
+        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
+        <address>Auteur: Ada Lovelace </address>
+        <i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>
+    </article>
+
     <article class="article">
         <h2>Lorem Ipsum</h2>
         <span>Vendredi 13 Avril 2017 - 16:20</span>
@@ -91,14 +108,6 @@
         <span>Vendredi 13 Avril 2017 - 16:20</span>
         <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
         <address>Auteur: Ada Lovelace </address>
-        <i><img src="assets/img-layout/Pictos/star.svg" alt=""></i>
-    </article>
-
-    <article class="article">
-        <h2>Lorem Ipsum</h2>
-        <span>Vendredi 13 Avril 2017 - 16:20</span>
-        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
-        <address>Auteur: Ada Lovelace </address>
         <i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>
     </article>
 
@@ -109,15 +118,7 @@
         <address>Auteur: Ada Lovelace </address>
         <i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>
     </article>
-
-    <article class="article">
-        <h2>Lorem Ipsum</h2>
-        <span>Vendredi 13 Avril 2017 - 16:20</span>
-        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
-        <address>Auteur: Ada Lovelace </address>
-        <i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>
-    </article>
-</section>
+</section> -->
 
 
 </body>
