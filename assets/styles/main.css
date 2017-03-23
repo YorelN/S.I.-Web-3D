@@ -299,7 +299,7 @@ input:focus {
     position: relative;
     list-style-type: none;
     text-align: center;
-    width: 19.6%;
+    width: 19%;
     margin: 0;
     display: inline-block;
     padding-top: 5px;
@@ -503,7 +503,7 @@ input[type="search"] {
     width: auto;
     text-align: center;
     color: white;
-    float: left;
+    display: inline-block;
     margin: 1% 2%;
 }
 
@@ -515,7 +515,7 @@ input[type="search"] {
     width: auto;
     text-align: center;
     color: white;
-    float: left;
+    display: inline-block;
     margin: 1% 2%;
 }
 
@@ -527,7 +527,7 @@ input[type="search"] {
     width: auto;
     text-align: center;
     color: white;
-    float: left;
+    display: inline-block;
     margin: 1% 2%;
 }
 
@@ -539,7 +539,7 @@ input[type="search"] {
     width: auto;
     text-align: center;
     color: white;
-    float: left;
+    display: inline-block;
     margin: 1% 2%;
 }
 
@@ -551,7 +551,7 @@ input[type="search"] {
     width: auto;
     text-align: center;
     color: white;
-    float: left;
+    display: inline-block;
     margin: 1% 2%;
 }
 
@@ -642,6 +642,10 @@ input[type="search"] {
     font-family: 'Dosis', sans-serif;
     color: #00e11a;
     font-size: 1.4rem;
+}
+
+.add_revision {
+    text-align: left;
 }
 
 .trois_d_fullpage {
