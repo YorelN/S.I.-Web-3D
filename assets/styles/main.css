@@ -54,7 +54,13 @@ img {
 
 a {
     text-decoration: none;
+    color: black;
 }
+
+i {
+    cursor: pointer;
+}
+
 
 #home {
     background: url("../img-layout/leo_vinci.jpg") fixed no-repeat;
@@ -307,7 +313,7 @@ input:focus {
 
 }
 .onglet:first-child img {
-    width: 11px;
+    width: 22px;
     margin: 0 auto;
 }
 .onglet:first-child:hover {
