@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 51.3 55.1" style="enable-background:new 0 0 51.3 55.1;" xml:space="preserve">
+	 viewBox="0 0 96.6 102" style="enable-background:new 0 0 96.6 102;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
-	.st1{fill:none;stroke:#201600;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st0{stroke:#000000;stroke-width:2;}
 </style>
-<title>Включение</title>
-<line class="st0" x1="25.6" y1="30.6" x2="25.6" y2="2.5"/>
-<path class="st1" d="M15.6,8.6C4.1,14.2-0.7,28,4.8,39.5s19.4,16.4,30.9,10.8C47.2,44.8,52,31,46.5,19.5c-2.2-4.7-6-8.4-10.6-10.7"
-	/>
+<title>deconnexion</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="deconnexion" transform="translate(1.000000, 1.000000)">
+		<path id="Shape" class="st0" d="M76.5,16.9c10.4,8.5,17,21.4,17,35.8C93.5,78.2,72.8,99,47.2,99C21.7,99,1,78.2,1,52.7
+			c0-14.4,6.6-27.3,17-35.8c0.7-0.5,0.1-1.4-0.6-0.8C6.8,24.9,0,38,0,52.7C0,78.8,21.2,100,47.3,100s47.3-21.2,47.3-47.3
+			c0-14.8-6.8-27.9-17.4-36.6C76.3,15.5,75.6,16.2,76.5,16.9L76.5,16.9z"/>
+		<path id="Shape_1_" class="st0" d="M47.7,44.8c0,0.7-1,0.8-1,0V0.5c0-0.7,1-0.6,1,0V44.8L47.7,44.8z"/>
+	</g>
+</g>
 </svg>
