@@ -16,12 +16,13 @@
 
 <section id="historique">
 
-    <h1>Historique</h1><article class="article">
+    <h1>Historique</h1>
 
     <?php foreach ($viewmodel as $item): ?>
-
+    <article class="article">
         <h2><?=$item['cours_name']?></h2>
         <p><?=$item['cours_content']?></p>
+        <div class="<?=$item['tag_color']?>_tag"><?=$item['tag_name']?></div>
     </article>
 
     <?php endforeach; ?>

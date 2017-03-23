@@ -12,6 +12,7 @@
 </head>
 <body id="login">
 <main>
+    <div class="logo"><img src="../assets/img-layout/Pictos/doctorapp.svg" alt=""></div>
     <div class="login">
         <div class="login-screen">
             <div class="app-title">
@@ -28,7 +29,7 @@
                     </div>
                     <?php Message::display()?>
                     <a href="#" class="forgot_mdp">Mot de passe oublié ?</a>
-                    <input type="submit" class="gray_btn" name="submit" value="Valider">
+                    <input type="submit" class="green_btn" name="submit" value="Connexion">
                 </div>
             </form>
         </div>

@@ -74,26 +74,25 @@ a {
 /*  =====================    //  LOGIN  //    ================================   */
 
 .logo img {
-    width: 50%;
-    margin: 2% auto;
+    width: 85%;
+    margin: 7% auto;
 }
 
 
 .login .blue_btn {
-    border-radius: 33px;
-    width: 49.5%;
     display: inline-block;
+    margin: 0;
 }
 
 .login .red_btn {
     border-radius: 33px;
-    width: 49%;
     display: inline-block;
 }
 
 .login {
     margin: 2vh auto;
-    width: 40vh;
+    width: 50vh;
+
 }
 .login-screen {
     background-color: #FFF;
@@ -149,7 +148,6 @@ input:focus {
     transition: 0.25s;
     display: block;
     width: 100%;
-    margin: 5% auto;
     border-radius: 0;
 
 }
@@ -190,7 +188,7 @@ input:focus {
     box-shadow: none;
     transition: 0.25s;
     display: block;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     border-radius: 33px;
 }
@@ -301,9 +299,12 @@ input:focus {
     position: relative;
     list-style-type: none;
     text-align: center;
-    width: 19%;
+    width: 19.6%;
+    margin: 0;
     display: inline-block;
     padding-top: 5px;
+    transition: 0.3s;
+
 }
 .onglet:first-child img {
     width: 11px;
@@ -311,20 +312,25 @@ input:focus {
 }
 .onglet:first-child:hover {
     background: rgba(238, 0, 0, 0.7);
+    transition: 0.3s;
 }
 
 .onglet:nth-child(2):hover {
     background: rgba(144, 0, 179, 0.7);
+    transition: 0.3s;
 }
 .onglet:nth-child(3):hover {
     background: rgba(20, 144, 255, 0.7);
+    transition: 0.3s;
 
 }
 .onglet:nth-child(4):hover {
     background: rgba(255, 193, 0, 0.7);
+    transition: 0.3s;
 }
 .onglet:last-child:hover {
     background: rgba(106, 198, 98, 0.7);
+    transition: 0.3s;
 }
 
 
@@ -334,7 +340,7 @@ input:focus {
     margin: 0 auto;
 }
 .onglet:nth-child(3) img {
-    width: 98px;
+    width: 146px;
     margin: 0 auto;
 }
 .onglet:nth-child(4) img {
@@ -379,7 +385,7 @@ input:focus {
     width: 90%;
     margin: 5% auto -2% auto;
     background: white;
-    padding: 4%;
+    padding: 2%;
     line-height: 33px;
     border-radius: 6px;
     font-size: 22px;
@@ -389,8 +395,8 @@ input:focus {
 
 .article h2 {
     font-family: 'Dosis', sans-serif;
-    font-size: 1.7rem;
-    padding: 2% 0 0 0;
+    font-size: 1.6rem;
+    padding: 2% 0;
 }
 
 .article span {
@@ -403,6 +409,7 @@ input:focus {
 .article p {
     font-family: 'Dosis', sans-serif;
     padding: 2% 0 2% 5%;
+    margin: 1rem auto;
 }
 
 .article address {
@@ -417,6 +424,13 @@ input:focus {
     top: 13%;
     right: 7%;
 }
+
+.article div {
+    padding: 0% 6%;
+    font-size: 1rem;
+}
+
+
 
 /*  =====================    //  SEARCH_BAR  //    ================================   */
 
@@ -482,7 +496,7 @@ input[type="search"] {
 
 
 .red_tag {
-    background: red;
+    background: #ee0000;
     font-family: 'Dosis', sans-serif;
     padding: 1% 3%;
     border-radius: 33px;
@@ -494,7 +508,7 @@ input[type="search"] {
 }
 
 .blue_tag {
-    background: #0072ff;
+    background: #1490FF;
     font-family: 'Dosis', sans-serif;
     padding: 1% 3%;
     border-radius: 33px;
@@ -506,7 +520,19 @@ input[type="search"] {
 }
 
 .green_tag {
-    background: #00e11a;
+    background: #6AC662;
+    font-family: 'Dosis', sans-serif;
+    padding: 1% 3%;
+    border-radius: 33px;
+    width: auto;
+    text-align: center;
+    color: white;
+    float: left;
+    margin: 1% 2%;
+}
+
+.yellow_tag {
+    background: #ffc100;
     font-family: 'Dosis', sans-serif;
     padding: 1% 3%;
     border-radius: 33px;
@@ -518,7 +544,7 @@ input[type="search"] {
 }
 
 .purple_tag {
-    background: #cc00ff;
+    background: #9000B3;
     font-family: 'Dosis', sans-serif;
     padding: 1% 3%;
     border-radius: 33px;
@@ -636,6 +662,7 @@ input[type="search"] {
 
 #historique .article {
     width: 90%;
+    margin: 5% auto;
 }
 #historique {
     width: 42%;
@@ -744,15 +771,55 @@ table {
 
 }
 
+/*  =====================    //  A_PROPOS  //    ================================   */
+#a_propos {
+    width: 70%;
+}
 
 
+#a_propos img {
+    width: 50%;
+    margin: 0 auto;
+}
 
+#a_propos h4 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    width: 70%;
+    margin: 3% auto;
+}
 
+#a_propos p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    width: 70%;
+    margin: 3% auto;
+}
 
+#a_propos a.blue_btn{
+    width: 49%;
+    text-align: center;
+    display: inline-block;
+    border-radius: 33px;
+    font-weight: 600;
+}
 
-/*  =====================    //  FAVORIS  //    ================================   */
+#a_propos a.green_btn{
+    width: 49%;
+    text-align: center;
+    display: inline-block;
+    border-radius: 33px;
+    font-weight: 600;
+}
 
-
+.link {
+    width: 42%;
+    margin: 0 auto;
+}
 /*  =====================    //  RESPONSIVE  //    ================================   */
 
 
@@ -768,6 +835,7 @@ table {
         margin: 2% 1.5%;
         position: relative;
         display: inline-block;
+        vertical-align: top;
 
     }
     #login section {
@@ -777,14 +845,14 @@ table {
 
     #login .article i img {
         position: absolute;
-        top: 13%;
+        top: 5%;
 
     }
 
     #nav_bar {
         position: fixed;
         top: 0;
-        height: 60px;
+        height: 54px;
     }
 
     #login nav.clearfix {
@@ -794,4 +862,13 @@ table {
         z-index: 22;
     }
 
+    .logo img {
+        width: 42%;
+        margin: 2% auto;
+    }
+
+    .onglet:nth-child(3) img {
+        width: 146px;
+        margin: 0 auto;
+    }
 }

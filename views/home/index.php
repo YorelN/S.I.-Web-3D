@@ -33,9 +33,6 @@
         <li class="onglet">
             <a href="<?=ROOT_URL?>">
                 <img src="assets/img-layout/Pictos/doctorapp.svg" alt="picto accueil">
-                <span>
-                    Accueil
-                </span>
             </a>
         </li>
 
@@ -69,16 +66,10 @@
 </nav>
 
 
-<section>
-    <article class="article">
-        <h2>Lorem Ipsum</h2>
-        <span>Vendredi 13 Avril 2017 - 16:20</span>
-        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
-        <address>Auteur: Ada Lovelace </address>
-        <i><img src="assets/img-layout/Pictos/star.svg" alt=""></i>
-    </article>
+<section class="app">
 
-    <article class="article">
+
+    <!-- <article class="article">
         <h2>Lorem Ipsum</h2>
         <span>Vendredi 13 Avril 2017 - 16:20</span>
         <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
@@ -117,8 +108,51 @@
         <address>Auteur: Ada Lovelace </address>
         <i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>
     </article>
-</section>
+</section> -->
 
+    <script type="text/javascript">
+        var app = document.querySelector('.app');
+        var articles = <?=$viewmodel?>;
+        render();
 
+        function render()
+        {
+            for (let i = 0; i < articles.length; i++) {
+                let article = document.createElement('article');
+                article.classList.add('article');
+                article.innerHTML =
+                    '<a href="<?=ROOT_URL?>courses/articles/'+ articles[i].id +'">' +
+                    '<h2>'+articles[i].name+'</h2>' + '</a>' +
+                    '<p>'+articles[i].content+'</p>' +
+                    '<i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>' +
+                    '<div class="' + articles[i].tag_color + '_tag">'+ articles[i].tag +'</div>'
+                ;
+                app.appendChild(article);
+                article.querySelector("i").addEventListener('click', function() {
+                    if (this.querySelector('img').src == 'http://localhost:8888/medical/assets/img-layout/Pictos/unstar.svg') {
+                        this.querySelector('img').src = 'http://localhost:8888/medical/assets/img-layout/Pictos/star.svg';
+                    } else {
+                        this.querySelector('img').src = 'http://localhost:8888/medical/assets/img-layout/Pictos/unstar.svg';
+                    }
+
+                    loadF(articles[i].id,<?=$_SESSION['id']?>,"<?=ROOT_URL.'courses/addfavoris'?>");
+                });
+            }
+        }
+
+        function loadF(objet,objet2, page)
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", page, true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+                    console.log(xhr.response);
+                }
+            };
+            xhr.send('cours=' + objet +"&user="+objet2);
+        }
+
+    </script>
 </body>
 </html>

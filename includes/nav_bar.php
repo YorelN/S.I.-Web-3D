@@ -21,10 +21,6 @@
         <li class="onglet">    
             <a href="<?=ROOT_URL?>">
                 <img src="../assets/img-layout/Pictos/doctorapp.svg" alt="picto accueil">
-
-                <span>
-                    Accueil
-                </span>
             </a>
         </li>
 

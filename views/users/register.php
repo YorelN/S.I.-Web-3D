@@ -11,6 +11,7 @@
 </head>
 <body id="login">
 <main>
+    <div class="logo"><img src="../assets/img-layout/Pictos/doctorapp.svg" alt=""></div>
     <div class="login">
         <div class="login-screen">
             <form action="<?php $_SERVER['PHP_SELF']?>" method="post">

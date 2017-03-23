@@ -78,9 +78,10 @@ class UserModel extends Model
 
     public function organisation()
     {
-        $sql = "SELECT cours.id as cours_id, cours.name as cours_name, cours.tag_id as tag FROM ((`users`
+        $sql = "SELECT cours.id as cours_id, cours.name as cours_name, cours.tag_id as tag, cours.content as cours_content, tags.name as tag_name, tags.color as tag_color FROM (((`users`
                 INNER JOIN `history` ON users.id = history.user_id)
-                INNER JOIN `cours` ON history.cours_id = cours.id) WHERE users.id = :id";
+                INNER JOIN `cours` ON history.cours_id = cours.id)
+                INNER JOIN `tags` ON tags.id = cours.tag_id) WHERE users.id = :id";
         $this->_stmt = $this->_db->prepare($sql);
         $this->_stmt->bindValue(':id', $_SESSION['id']);
         $this->_stmt->execute();
