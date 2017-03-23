@@ -40,6 +40,15 @@
             margin: 1% .5%;
         }
 
+        .search_result article i {
+            cursor: pointer;
+        }
+
+        .search_result article div {
+            display: inline-block;
+            float: none;
+        }
+
     </style>
 </head>
 <body>
@@ -90,7 +99,6 @@
     var aside = document.querySelector('.tag');
     var lis = [];
     var tags_to_show = <?=$viewmodel?>;
-    var classes_array = ['blue_tag', 'green_tag', 'purple_tag', 'red_tag', 'yellow_tag'];
     render_tags();
 
 
@@ -136,7 +144,8 @@
                 '<a href="<?=ROOT_URL?>courses/articles/'+ articles[i].id +'">' +
                     '<h2>'+articles[i].name+'</h2>' + '</a>' +
                     '<p>'+articles[i].content+'</p>' +
-                    '<i><img src="../assets/img-layout/Pictos/unstar.svg" alt=""></i>'
+                    '<i><img src="../assets/img-layout/Pictos/unstar.svg" alt=""></i>' +
+                    '<div class="'+articles[i].tag_color+'_tag">' + articles[i].tag +'</div>'
                 ;
             article.classList.add(new_articles);
             app.appendChild(article);
@@ -154,10 +163,9 @@
     function render_tags()
     {
         for (let i = 0; i < tags_to_show.length; i++) {
-            var random = Math.floor(Math.random() * 5);
             let div_tag = document.createElement('div');
             div_tag.innerHTML = tags_to_show[i].name;
-            div_tag.className = classes_array[random];
+            div_tag.className = tags_to_show[i].tag_color + "_tag";
             aside.appendChild(div_tag);
         }
         lis = document.querySelectorAll('.tag div');
