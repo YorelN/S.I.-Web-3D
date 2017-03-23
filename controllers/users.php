@@ -20,9 +20,15 @@ class Users extends Controller
         $this->returnView($viewmodel->logout(), false);
     }
 
-    protected function profil()
+    protected function organisation()
     {
         $viewmodel = new UserModel();
-        $this->returnView($viewmodel->profil(), false);
+        $this->returnView($viewmodel->organisation(), false);
+    }
+
+    protected function favoris()
+    {
+        $viewmodel = new UserModel();
+        $this->returnView($viewmodel->favoris(), false);
     }
 }

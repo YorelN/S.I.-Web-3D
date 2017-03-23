@@ -10,7 +10,6 @@ class UserModel extends Model
             Message::setMsg('Un compte a déjà été crée avec cet adresse e-mail', "error");
             return;
         } else if ($_POST['submit']) {
-
             if ($_POST['password'] == '' || $_POST['mail'] == '' || $_POST['universite'] == '') {
                 Message::setMsg("Merci de remplir tous les champs", "error");
                 return;
@@ -63,7 +62,7 @@ class UserModel extends Model
                 $_SESSION['mail'] = $row['mail'];
                 $_SESSION['logged_in'] = true;
                 // $_SESSION['name'] = $row['name'];
-                header('Location : ' . ROOT_URL);
+                header('Location: ' . ROOT_URL);
             }
         }
     }
@@ -77,26 +76,28 @@ class UserModel extends Model
         exit;
     }
 
-    public function profil()
+    public function organisation()
     {
         $sql = "SELECT cours.id as cours_id, cours.name as cours_name, cours.tag_id as tag FROM ((`users`
-                INNER JOIN `favoris` ON users.id = favoris.user_id)
-                INNER JOIN `cours` ON favoris.cours_id = cours.id) WHERE users.id = :id";
+                INNER JOIN `history` ON users.id = history.user_id)
+                INNER JOIN `cours` ON history.cours_id = cours.id) WHERE users.id = :id";
         $this->_stmt = $this->_db->prepare($sql);
         $this->_stmt->bindValue(':id', $_SESSION['id']);
         $this->_stmt->execute();
-        $rows = $this->_stmt->fetchAll(PDO::FETCH_ASSOC);
-        $row['favoris'] = $rows;
-
-        $sqll = "SELECT cours.id as cours_id, cours.name as cours_name, cours.tag_id as tag FROM ((`users`
-                INNER JOIN `history` ON users.id = history.user_id)
-                INNER JOIN `cours` ON history.cours_id = cours.id) WHERE users.id = :id";
-        $stmt = $this->_db->prepare($sqll);
-        $stmt->bindValue(':id', $_SESSION['id']);
-        $stmt->execute();
-        $roww = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $row['history'] = $roww;
+        $row = $this->_stmt->fetchAll(PDO::FETCH_ASSOC);
         return $row;
+    }
+
+    public function favoris()
+    {
+        $sql = "SELECT cours.id as cours_id, cours.name as cours_name, cours.tag_id as tag, cours.content as cours_content, tags.name as tag_name FROM (((`users`
+                INNER JOIN `favoris` ON users.id = favoris.user_id)
+                INNER JOIN `cours` ON favoris.cours_id = cours.id)
+                INNER JOIN `tags` ON cours.tag_id = tags.id) WHERE users.id = :id";
+        $this->_stmt = $this->_db->prepare($sql);
+        $this->_stmt->bindValue(':id', $_SESSION['id']);
+        $row = $this->resultSet();
+        return json_encode($row);
     }
 
     private function exists($info)
