@@ -66,6 +66,11 @@
 </div>
 
 <section>
+
+    <aside class="tag">
+        <h2>#Tags</h2>
+    </aside>
+
     <aside class="search_result">
 <!--        <article class="article">-->
 <!--            <h2>Lorem Ipsum</h2>-->
@@ -84,11 +89,6 @@
 <!--        </article>-->
     </aside>
 
-    <aside class="tag">
-        <h2>#Tags</h2>
-
-
-    </aside>
 </section>
 
 <script type="text/javascript">

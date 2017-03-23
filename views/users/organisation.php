@@ -1,4 +1,4 @@
-!<!doctype html>
+<!doctype html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -14,20 +14,6 @@
 
 <?php require "includes/nav_bar.php"?>
 
-<section id="historique">
-
-    <h1>Historique</h1>
-
-    <?php foreach ($viewmodel as $item): ?>
-    <article class="article">
-        <h2><?=$item['cours_name']?></h2>
-        <p><?=$item['cours_content']?></p>
-        <div class="<?=$item['tag_color']?>_tag"><?=$item['tag_name']?></div>
-    </article>
-
-    <?php endforeach; ?>
-
-</section>
 <section id="calendar">
     <div id="wrapOverall">
 
@@ -105,5 +91,22 @@
         </div> <!-- CALENDAR -->
 
 </section>
+
+
+<section id="historique">
+
+    <h1>Historique</h1>
+
+    <?php foreach ($viewmodel as $item): ?>
+    <article class="article">
+        <h2><?=$item['cours_name']?></h2>
+        <p><?=$item['cours_content']?></p>
+        <div class="<?=$item['tag_color']?>_tag"><?=$item['tag_name']?></div>
+    </article>
+
+    <?php endforeach; ?>
+
+</section>
+
 </body>
 </html> 
