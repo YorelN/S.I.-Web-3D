@@ -76,25 +76,15 @@ class UserModel extends Model
         exit;
     }
 
-    public function profil()
+    public function organisation()
     {
         $sql = "SELECT cours.id as cours_id, cours.name as cours_name, cours.tag_id as tag FROM ((`users`
-                INNER JOIN `favoris` ON users.id = favoris.user_id)
-                INNER JOIN `cours` ON favoris.cours_id = cours.id) WHERE users.id = :id";
+                INNER JOIN `history` ON users.id = history.user_id)
+                INNER JOIN `cours` ON history.cours_id = cours.id) WHERE users.id = :id";
         $this->_stmt = $this->_db->prepare($sql);
         $this->_stmt->bindValue(':id', $_SESSION['id']);
         $this->_stmt->execute();
-        $rows = $this->_stmt->fetchAll(PDO::FETCH_ASSOC);
-        $row['favoris'] = $rows;
-
-        $sqll = "SELECT cours.id as cours_id, cours.name as cours_name, cours.tag_id as tag FROM ((`users`
-                INNER JOIN `history` ON users.id = history.user_id)
-                INNER JOIN `cours` ON history.cours_id = cours.id) WHERE users.id = :id";
-        $stmt = $this->_db->prepare($sqll);
-        $stmt->bindValue(':id', $_SESSION['id']);
-        $stmt->execute();
-        $roww = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $row['history'] = $roww;
+        $row = $this->_stmt->fetchAll(PDO::FETCH_ASSOC);
         return $row;
     }
 
