@@ -2,6 +2,15 @@
 
 class CourseModel extends Model
 {
+
+    public function search()
+    {
+        $sql = "SELECT `id`, `name` FROM `tags`";
+        $this->_stmt = $this->_db->prepare($sql);
+        $rows = $this->resultSet();
+        return json_encode($rows);
+    }
+
     public function api()
     {
 //        if (!isset($_SESSION['logged_in'])) {
