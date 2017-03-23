@@ -77,18 +77,7 @@
 
     <aside class="tag">
         <h2>#Tags</h2>
-        <div class="blue_tag">Epaule</div>
-        <div class="green_tag">Cardiologie</div>
-        <div class="red_tag">Poumon</div>
-        <div class="blue_tag">Coeur</div>
-        <div class="purple_tag">Neurologie</div>
-        <div class="red_tag">ORL</div>
-        <div class="green_tag">Pharmacologie</div>
-        <div class="purple_tag">Cardiologie</div>
-        <div class="blue_tag">Psychologie</div>
-        <div class="purple_tag">Nerf</div>
-        <div class="red_tag">ORL</div>
-        <div class="green_tag">Medicament</div>
+
 
     </aside>
 </section>
@@ -98,26 +87,14 @@
     var articles = [];
     var tags = document.querySelector('.tags');
     var new_articles = '';
+    var aside = document.querySelector('.tag');
 //    var loading = document.querySelector('.loading');
-    var lis = document.querySelectorAll('.tag div');
-    render();
-    for (let i = 0; i < lis.length; i++) {
-        lis[i].addEventListener('click', function() {
-            new_articles = this.innerHTML;
-            loadFile(this.innerHTML, '<?= ROOT_URL."courses/api"?>');
-            let div = document.createElement('div');
-            div.classList.add(this.className);
-            div.innerHTML= this.innerHTML;
-            tags.appendChild(div);
-            div.addEventListener('click', function() {
-                var toRemove = document.querySelectorAll('.' + this.innerHTML);
-                this.remove();
-                for (let j = 0; j < toRemove.length; j++) {
-                    app.removeChild(toRemove[j]);
-                }
-            });
-        });
-    }
+    var lis = [];
+    var tags_to_show = <?=$viewmodel?>;
+    var classes_array = ['blue_tag', 'green_tag', 'purple_tag', 'red_tag'];
+//    render();
+    render_tags();
+
 
     function loadFile(objet, page)
     {
@@ -168,6 +145,35 @@
             article.querySelector("i").addEventListener('click', function() {
               
               loadF(articles[i].id,<?=$_SESSION['id']?>,"<?=ROOT_URL.'courses/addfavoris'?>");
+            });
+        }
+    }
+
+    function render_tags()
+    {
+        for (let i = 0; i < tags_to_show.length; i++) {
+            var random = Math.floor(Math.random() * 4);
+            let div_tag = document.createElement('div');
+            div_tag.innerHTML = tags_to_show[i].name;
+            div_tag.className = classes_array[random];
+            aside.appendChild(div_tag);
+        }
+        lis = document.querySelectorAll('.tag div');
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].addEventListener('click', function() {
+                new_articles = this.innerHTML;
+                loadFile(this.innerHTML, '<?= ROOT_URL."courses/api"?>');
+                let div = document.createElement('div');
+                div.classList.add(this.className);
+                div.innerHTML= this.innerHTML;
+                tags.appendChild(div);
+                div.addEventListener('click', function() {
+                    var toRemove = document.querySelectorAll('.' + this.innerHTML);
+                    this.remove();
+                    for (let j = 0; j < toRemove.length; j++) {
+                        app.removeChild(toRemove[j]);
+                    }
+                });
             });
         }
     }

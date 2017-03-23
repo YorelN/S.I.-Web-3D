@@ -4,7 +4,8 @@ class Courses extends Controller
 {
     protected function search()
     {
-        $this->returnView('', false);
+        $viewmodel = new CourseModel();
+        $this->returnView($viewmodel->search(), false);
     }
 
     protected function api()
