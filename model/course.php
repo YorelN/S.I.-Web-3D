@@ -49,12 +49,11 @@ class CourseModel extends Model
     {
         if ($_GET['id'] != '')
         {
-            $sql = "SELECT `name`,`content` FROM `cours` WHERE `id` = :id";
+            $sql = "SELECT `name`,`full_content` FROM `cours` WHERE `id` = :id";
             $this->_stmt = $this->_db->prepare($sql);
             $this->_stmt->bindValue(':id', htmlentities($_GET['id']));
-            $row = $this->resultSet();
-            var_dump($row);
-            die();
+            $this->_stmt->execute();
+            $row = $this->_stmt->fetch(PDO::FETCH_ASSOC);
             return $row;
         }
     }
