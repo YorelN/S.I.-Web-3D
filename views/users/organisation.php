@@ -8,6 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-<h1>yo lol le profil</h1>
+<?php
+foreach ($viewmodel as $item): ?>
+
+<div>
+    <h1><?=$item['cours_name']?></h1>
+</div>
+
+<?php endforeach; ?>
 </body>
 </html> 
