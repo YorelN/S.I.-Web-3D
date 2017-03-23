@@ -74,8 +74,8 @@ a {
 /*  =====================    //  LOGIN  //    ================================   */
 
 .logo img {
-    width: 100%;
-    margin: 2% auto;
+    width: 85%;
+    margin: 7% auto;
 }
 
 
@@ -91,7 +91,8 @@ a {
 
 .login {
     margin: 2vh auto;
-    width: 40vh;
+    width: 50vh;
+
 }
 .login-screen {
     background-color: #FFF;
@@ -298,9 +299,12 @@ input:focus {
     position: relative;
     list-style-type: none;
     text-align: center;
-    width: 19%;
+    width: 19.6%;
+    margin: 0;
     display: inline-block;
     padding-top: 5px;
+    transition: 0.3s;
+
 }
 .onglet:first-child img {
     width: 11px;
@@ -308,20 +312,25 @@ input:focus {
 }
 .onglet:first-child:hover {
     background: rgba(238, 0, 0, 0.7);
+    transition: 0.3s;
 }
 
 .onglet:nth-child(2):hover {
     background: rgba(144, 0, 179, 0.7);
+    transition: 0.3s;
 }
 .onglet:nth-child(3):hover {
     background: rgba(20, 144, 255, 0.7);
+    transition: 0.3s;
 
 }
 .onglet:nth-child(4):hover {
     background: rgba(255, 193, 0, 0.7);
+    transition: 0.3s;
 }
 .onglet:last-child:hover {
     background: rgba(106, 198, 98, 0.7);
+    transition: 0.3s;
 }
 
 
@@ -762,9 +771,55 @@ table {
 
 }
 
+/*  =====================    //  A_PROPOS  //    ================================   */
+#a_propos {
+    width: 70%;
+}
 
 
+#a_propos img {
+    width: 50%;
+    margin: 0 auto;
+}
 
+#a_propos h4 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    width: 70%;
+    margin: 3% auto;
+}
+
+#a_propos p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    width: 70%;
+    margin: 3% auto;
+}
+
+#a_propos a.blue_btn{
+    width: 49%;
+    text-align: center;
+    display: inline-block;
+    border-radius: 33px;
+    font-weight: 600;
+}
+
+#a_propos a.green_btn{
+    width: 49%;
+    text-align: center;
+    display: inline-block;
+    border-radius: 33px;
+    font-weight: 600;
+}
+
+.link {
+    width: 42%;
+    margin: 0 auto;
+}
 /*  =====================    //  RESPONSIVE  //    ================================   */
 
 
@@ -808,7 +863,7 @@ table {
     }
 
     .logo img {
-        width: 50%;
+        width: 42%;
         margin: 2% auto;
     }
 
