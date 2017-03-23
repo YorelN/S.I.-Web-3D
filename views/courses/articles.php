@@ -168,7 +168,7 @@
     </article>
 </section>
 
-<aside>
+<aside class="autres_articles">
     <h2 class="article_h2">Articles liés</h2>
     <?php foreach ($viewmodel['lies'] as $item) :?>
     <article class="article_lies">
