@@ -60,16 +60,6 @@
     </ul>
 </nav>
 
-<nav class="clearfix">
-    <a href="#" class="all_articles">
-        <p class="active">Articles récents</p>
-    </a>
-    <a href="#" class="all_articles">
-        <p class="notActive">Articles conseillé</p>
-    </a>
-</nav>
-
-
 <section class="app">
 </section>
 
