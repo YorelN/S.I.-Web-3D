@@ -47,8 +47,16 @@ class CourseModel extends Model
 
     public function articles()
     {
+        if (!isset($_SESSION['logged_in'])) {
+            Message::setMsg('Vous devez vous connecter pour voir les articles', 'error');
+            header("Location: ".ROOT_URL.'users/login');
+            exit;
+        }
+
         if ($_GET['id'] != '')
         {
+            $this->add_history();
+
             $sql = "SELECT cours.name as name,cours.full_content as full_content, cours.tag_id as tag_id, tags.name as tag, tags.color as tag_color FROM `cours`
             INNER JOIN `tags` ON cours.tag_id = tags.id WHERE cours.id = :id";
             $this->_stmt = $this->_db->prepare($sql);
@@ -75,6 +83,7 @@ class CourseModel extends Model
             $row_final['autres'] = $rowss;
             return $row_final;
         }
+        return;
     }
 
     private function exists($user, $cours)
@@ -84,5 +93,26 @@ class CourseModel extends Model
         $stmt->bindValue(":cours", $cours);
         $stmt->execute();
         return (bool) $stmt->fetchColumn();
+    }
+
+    private function exists_in_history($user, $cours)
+    {
+        $stmt = $this->_db->prepare('SELECT COUNT(*) FROM `history` WHERE `user_id` = :user AND `cours_id` = :cours');
+        $stmt->bindValue(":user", $user);
+        $stmt->bindValue(":cours", $cours);
+        $stmt->execute();
+        return (bool) $stmt->fetchColumn();
+    }
+
+    private function add_history()
+    {
+        if (!$this->exists_in_history($_SESSION['id'],$_GET['id'])) {
+            $sql = "INSERT INTO `history` (`user_id`, `cours_id`) VALUES (:user, :cours)";
+            $stmt = $this->_db->prepare($sql);
+            $stmt->bindValue(':user', $_SESSION['id']);
+            $stmt->bindValue(':cours', $_GET['id']);
+            $stmt->execute();
+        }
+        return;
     }
 }
