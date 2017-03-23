@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -12,54 +12,8 @@
         document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
         -->
     </script>
-    <script type="text/javascript">
-        <!--
-        var config = {
-            width: 960,
-            height: 600,
-            params: { enableDebugging:"0" }
 
-        };
-        var u = new UnityObject2(config);
 
-        jQuery(function() {
-
-            var $missingScreen = jQuery("#unityPlayer").find(".missing");
-            var $brokenScreen = jQuery("#unityPlayer").find(".broken");
-            $missingScreen.hide();
-            $brokenScreen.hide();
-
-            u.observeProgress(function (progress) {
-                switch(progress.pluginStatus) {
-                    case "broken":
-                        $brokenScreen.find("a").click(function (e) {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            u.installPlugin();
-                            return false;
-                        });
-                        $brokenScreen.show();
-                        break;
-                    case "missing":
-                        $missingScreen.find("a").click(function (e) {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            u.installPlugin();
-                            return false;
-                        });
-                        $missingScreen.show();
-                        break;
-                    case "installed":
-                        $missingScreen.remove();
-                        break;
-                    case "first":
-                        break;
-                }
-            });
-            u.initPlugin(jQuery("#unityPlayer")[0], "../../EssaiPlugin/Hippocrapp.unity3d");
-        });
-        -->
-    </script>
     <style type="text/css">
         <!--
         body {
@@ -102,7 +56,7 @@
         }
         div.broken img,
         div.missing img {
-            border-width: 0px;
+            border-width: 0;
         }
         div.broken {
             display: none;
@@ -112,17 +66,25 @@
             height: 600px;
             width: 960px;
         }
-        -->
     </style>
 
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="../../assets/styles/main.css">
+    <style type="text/css">
+        .blue_btn,
+        .green_btn {
+            display: inline-block;
+            width: 49%;
+            border-radius: 33px;
+        }
+
+    </style>
 
 </head>
 
-<body>
+<body style="text-align: left">
 <nav id="nav_bar">
     <ul>
         <li class="onglet">
@@ -183,45 +145,100 @@
             </a>
         </div>
     </div>
-    <p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+    <p class="footer" style="text-align: center">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
 </div>
 
-<div class="add_revision">
+<div class="add_revision" style="margin-top: 50px;">
     <i><img src="../../assets/img-layout/Pictos/revision.svg" alt="Organisation"></i>
-    <a href="#">Planifier des révisions</a>
+    <a href="<?=ROOT_URL . 'users/organisation'?>">Planifier des révisions</a>
 </div>
 
 <section class="details_article">
 
     <article>
+        <div class="<?=$viewmodel['cours']['tag_color']?>_tag" style="display: inline-block;float: none;width: auto;">
+            <?=$viewmodel['cours']['tag']?>
+        </div>
+        <h1><?=$viewmodel['cours']['name']?></h1>
 
-        <h1><?=$viewmodel['name']?></h1>
-
-        <p><?=$viewmodel['full_content']?></p>
-
+        <p><?=$viewmodel['cours']['full_content']?></p>
+        <div class="blue_btn" style="cursor: pointer">Partager</div>
+        <div class="green_btn">Ajouter aux favoris</div>
     </article>
 </section>
 
 <aside>
+    <h2 class="article_h2">Articles liés</h2>
+    <?php foreach ($viewmodel['lies'] as $item) :?>
     <article class="article_lies">
-        <h2>Lorem Ipsum</h2>
-        <span>Vendredi 13 Avril 2017 - 16:20</span>
-        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
-        <address>Auteur: Ada Lovelace </address>
-        <i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>
+        <a href="<?=ROOT_URL.'courses/articles/' . $item['cours_id']?>">
+            <h2><?=$item['cours_name']?></h2>
+            <p><?=$item['cours_content']?></p>
+            <div class="<?=$item['tag_color']?>_tag"><?=$item['tag_name']?></div>
+        </a>
     </article>
-
-    <article class="article_lies">
-        <h2>Lorem Ipsum</h2>
-        <span>Vendredi 13 Avril 2017 - 16:20</span>
-        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
-        <address>Auteur: Ada Lovelace </address>
-        <i><img src="../assets/img-layout/Pictos/star.svg" alt=""></i>
-    </article>
+    <?php endforeach;?>
+    <h2 class="article_h2">Autres articles</h2>
+    <?php foreach ($viewmodel['autres'] as $item) :?>
+        <article class="article_lies">
+            <a href="<?=ROOT_URL.'courses/articles/' . $item['cours_id']?>">
+                <h2><?=$item['cours_name']?></h2>
+                <p><?=$item['cours_content']?></p>
+                <div class="<?=$item['tag_color']?>_tag"><?=$item['tag_name']?></div>
+            </a>
+        </article>
+    <?php endforeach;?>
 
 
 </aside>
 
+<script type="text/javascript">
+    <!--
+    var config = {
+        width: 960,
+        height: 600,
+        params: { enableDebugging:"0" }
+
+    };
+    var u = new UnityObject2(config);
+
+    jQuery(function() {
+
+        var $missingScreen = jQuery("#unityPlayer").find(".missing");
+        var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+        $missingScreen.hide();
+        $brokenScreen.hide();
+
+        u.observeProgress(function (progress) {
+            switch(progress.pluginStatus) {
+                case "broken":
+                    $brokenScreen.find("a").click(function (e) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        u.installPlugin();
+                        return false;
+                    });
+                    $brokenScreen.show();
+                    break;
+                case "missing":
+                    $missingScreen.find("a").click(function (e) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        u.installPlugin();
+                        return false;
+                    });
+                    $missingScreen.show();
+                    break;
+                case "installed":
+                    $missingScreen.remove();
+                    break;
+                case "first":
+                    break;
+            }
+        });
+        u.initPlugin(jQuery("#unityPlayer")[0], "../../EssaiPlugin/Hippocrapp.unity3d");
+    });
+</script>
 </body>
 </html>
 

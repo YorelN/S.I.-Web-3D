@@ -49,12 +49,31 @@ class CourseModel extends Model
     {
         if ($_GET['id'] != '')
         {
-            $sql = "SELECT `name`,`full_content` FROM `cours` WHERE `id` = :id";
+            $sql = "SELECT cours.name as name,cours.full_content as full_content, cours.tag_id as tag_id, tags.name as tag, tags.color as tag_color FROM `cours`
+            INNER JOIN `tags` ON cours.tag_id = tags.id WHERE cours.id = :id";
             $this->_stmt = $this->_db->prepare($sql);
             $this->_stmt->bindValue(':id', htmlentities($_GET['id']));
             $this->_stmt->execute();
             $row = $this->_stmt->fetch(PDO::FETCH_ASSOC);
-            return $row;
+
+            $sql_articles_lies = "SELECT cours.id as cours_id, cours.name as cours_name, cours.content as cours_content, tags.name as tag_name, tags.color as tag_color FROM `cours`
+            INNER JOIN `tags` ON cours.tag_id = tags.id WHERE tags.id = :tag LIMIT 2";
+            $stmt = $this->_db->prepare($sql_articles_lies);
+            $stmt->bindValue(":tag", $row['tag_id']);
+            $stmt->execute();
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            $sql_autres = "SELECT cours.id as cours_id, cours.name as cours_name, cours.content as cours_content, tags.name as tag_name, tags.color as tag_color FROM `cours`
+            INNER JOIN `tags` ON cours.tag_id = tags.id WHERE NOT tags.id = :tag LIMIT 2";
+            $stmt_autres = $this->_db->prepare($sql_autres);
+            $stmt_autres->bindValue(":tag", $row['tag_id']);
+            $stmt_autres->execute();
+            $rowss = $stmt_autres->fetchAll(PDO::FETCH_ASSOC);
+
+            $row_final['cours'] = $row;
+            $row_final['lies'] = $rows;
+            $row_final['autres'] = $rowss;
+            return $row_final;
         }
     }
 
