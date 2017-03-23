@@ -294,6 +294,26 @@ input:focus {
     width: 11px;
     margin: 0 auto;
 }
+.onglet:first-child:hover {
+    background: rgba(238, 0, 0, 0.7);
+}
+
+.onglet:nth-child(2):hover {
+    background: rgba(144, 0, 179, 0.7);
+}
+.onglet:nth-child(3):hover {
+    background: rgba(20, 144, 255, 0.7);
+
+}
+.onglet:nth-child(4):hover {
+    background: rgba(255, 193, 0, 0.7);
+}
+.onglet:last-child:hover {
+    background: rgba(106, 198, 98, 0.7);
+}
+
+
+
 .onglet:nth-child(2) img {
     width: 28px;
     margin: 0 auto;
@@ -587,6 +607,44 @@ input[type=search] {
 /*  =====================    //  ORGANISATION  //    ================================   */
 
 
+#calendar {
+    float: right;
+    margin: 5% 5%;
+    position: fixed;
+    right: 5%;
+
+
+}
+
+
+#historique .article {
+    width: 90%;
+}
+#historique {
+    width: 42%;
+    float: left;
+    margin: 8% 5%;
+}
+
+#historique h1 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 1% 9%;
+}
+
+
+
+
+table {
+    width: 400px;
+    height: 400px;
+    background: #ebebeb;
+    margin: 50px auto;
+    border-collapse: collapse;
+    box-shadow: 0 20px 26px -29px rgba(0,0,0,0.75);
+}
 
 
 
@@ -595,6 +653,79 @@ input[type=search] {
 
 
 
+
+
+/* MONTH */
+/*--------------------------------------*/
+.month {
+    background: #FF3C31;
+    color: #fff;
+    font: 2em/1em arial;
+    height: 45px;
+    border-top: solid 10px #CF3128;
+}
+
+
+
+/* WEEKS */
+/*--------------------------------------*/
+.weeks {
+    background: #fff;
+    height: 40px;
+    font: 1em/1em arial;
+    color: #FF3C31;
+    text-align: center;
+}
+
+
+
+/* DAYS */
+/*--------------------------------------*/
+.week1 td {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font: 500 1em/1em arial;
+    color: #212121;
+}
+
+.week2 td {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font: 500 1em/1em arial;
+    color: #212121;
+}
+
+.week3 td {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font: 500 1em/1em arial;
+    color: #212121;
+}
+
+.week4 td {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font: 500 1em/1em arial;
+    color: #212121;
+}
+
+.week5 td {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font: 500 1em/1em arial;
+    color: #212121;
+}
+
+.days:hover {
+    background: #FF3C31;
+    color: #fff;
+
+}
 
 
 
