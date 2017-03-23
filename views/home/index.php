@@ -9,7 +9,11 @@
 
     <title>Articles</title>
 </head>
+
+
 <body id="login">
+
+<?php if (isset($_SESSION['logged_in'])): ?>
 <nav id="nav_bar">
     <ul>
         <li class="onglet">
@@ -67,48 +71,7 @@
 
 
 <section class="app">
-
-
-    <!-- <article class="article">
-        <h2>Lorem Ipsum</h2>
-        <span>Vendredi 13 Avril 2017 - 16:20</span>
-        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
-        <address>Auteur: Ada Lovelace </address>
-        <i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>
-    </article>
-
-    <article class="article">
-        <h2>Lorem Ipsum</h2>
-        <span>Vendredi 13 Avril 2017 - 16:20</span>
-        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
-        <address>Auteur: Ada Lovelace </address>
-        <i><img src="assets/img-layout/Pictos/star.svg" alt=""></i>
-    </article>
-
-    <article class="article">
-        <h2>Lorem Ipsum</h2>
-        <span>Vendredi 13 Avril 2017 - 16:20</span>
-        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
-        <address>Auteur: Ada Lovelace </address>
-        <i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>
-    </article>
-
-    <article class="article">
-        <h2>Lorem Ipsum</h2>
-        <span>Vendredi 13 Avril 2017 - 16:20</span>
-        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
-        <address>Auteur: Ada Lovelace </address>
-        <i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>
-    </article>
-
-    <article class="article">
-        <h2>Lorem Ipsum</h2>
-        <span>Vendredi 13 Avril 2017 - 16:20</span>
-        <p>When you’re sick, listen to your mother: go see your doctor and find out what illness you have and how to get better. If you’re…</p>
-        <address>Auteur: Ada Lovelace </address>
-        <i><img src="assets/img-layout/Pictos/unstar.svg" alt=""></i>
-    </article>
-</section> -->
+</section>
 
     <script type="text/javascript">
         var app = document.querySelector('.app');
@@ -154,5 +117,17 @@
         }
 
     </script>
+<?php else: ?>
+        <section id="a_propos">
+            <div><img src="assets/img-layout/Pictos/doctorapp.svg" alt=""></div>
+            <h4>Doctor'App, la solution #1 pour les futurs professionnels de la santé</h4>
+            <p>Parcourez de nombreux cours accompagné d'une modélisation en 3D inédite pour une meilleur compréhension du corp humain</p>
+            <div class="link">
+                <a href="<?=ROOT_URL.'users/register'?>" class="blue_btn">Inscription</a>
+                <a href="<?=ROOT_URL.'users/login'?>" class="green_btn">Connexion</a>
+            </div>
+        </section>
+<?php  endif;?>
 </body>
+
 </html>
