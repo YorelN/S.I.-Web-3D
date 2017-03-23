@@ -88,6 +88,17 @@ class UserModel extends Model
         return $row;
     }
 
+    public function favoris()
+    {
+        $sql = "SELECT cours.id as cours_id, cours.name as cours_name, cours.tag_id as tag, cours.content as cours_content FROM ((`users`
+                INNER JOIN `favoris` ON users.id = favoris.user_id)
+                INNER JOIN `cours` ON favoris.cours_id = cours.id) WHERE users.id = :id";
+        $this->_stmt = $this->_db->prepare($sql);
+        $this->_stmt->bindValue(':id', $_SESSION['id']);
+        $row = $this->resultSet();
+        return json_encode($row);
+    }
+
     private function exists($info)
     {
         $stmt = $this->_db->prepare('SELECT COUNT(*) FROM `users` WHERE `mail` = :mail');

@@ -25,4 +25,10 @@ class Users extends Controller
         $viewmodel = new UserModel();
         $this->returnView($viewmodel->organisation(), false);
     }
+
+    protected function favoris()
+    {
+        $viewmodel = new UserModel();
+        $this->returnView($viewmodel->favoris(), false);
+    }
 }
