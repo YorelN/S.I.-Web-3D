@@ -31,4 +31,6 @@ class Users extends Controller
         $viewmodel = new UserModel();
         $this->returnView($viewmodel->favoris(), false);
     }
+
+
 }
