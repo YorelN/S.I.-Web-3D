@@ -18,9 +18,10 @@
             </a>
         </li>
 
-        <li class="onglet">
+        <li class="onglet">    
             <a href="<?=ROOT_URL?>">
-                <img src="../assets/img-layout/Pictos/home.svg" alt="picto accueil">
+                <img src="../assets/img-layout/Pictos/doctorapp.svg" alt="picto accueil">
+
                 <span>
                     Accueil
                 </span>
