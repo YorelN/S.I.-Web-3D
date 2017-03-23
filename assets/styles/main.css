@@ -81,13 +81,11 @@ a {
 
 .login .blue_btn {
     border-radius: 33px;
-    width: 49.5%;
     display: inline-block;
 }
 
 .login .red_btn {
     border-radius: 33px;
-    width: 49%;
     display: inline-block;
 }
 
