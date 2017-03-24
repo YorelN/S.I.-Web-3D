@@ -25,6 +25,7 @@ class UserModel extends Model
 
             $stmt->execute();
             Message::setMsg("Votre compte a bien été crée", "success");
+            header('Location: '.ROOT_URL.'users/login');
         }
             return;
     }
@@ -78,6 +79,12 @@ class UserModel extends Model
 
     public function organisation()
     {
+        if (!isset($_SESSION['logged_in'])) {
+            Message::setMsg('Vous devous vous connecter pour accéder à cette interface', 'error');
+            header("Location: " . ROOT_URL.'users/login');
+            exit;
+        }
+
         $sql = "SELECT cours.id as cours_id, cours.name as cours_name, cours.tag_id as tag, cours.content as cours_content, tags.name as tag_name, tags.color as tag_color FROM (((`users`
                 INNER JOIN `history` ON users.id = history.user_id)
                 INNER JOIN `cours` ON history.cours_id = cours.id)
@@ -106,6 +113,11 @@ class UserModel extends Model
 
     public function favoris()
     {
+        if (!isset($_SESSION['logged_in'])) {
+            Message::setMsg('Vous devous vous connecter pour accéder à cette interface', 'error');
+            header("Location: " . ROOT_URL.'users/login');
+            exit;
+        }
         $sql = "SELECT cours.id as cours_id, cours.name as cours_name, cours.tag_id as tag, cours.content as cours_content, tags.name as tag_name, tags.color as tag_color FROM (((`users`
                 INNER JOIN `favoris` ON users.id = favoris.user_id)
                 INNER JOIN `cours` ON favoris.cours_id = cours.id)

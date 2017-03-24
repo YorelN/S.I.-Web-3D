@@ -72,7 +72,7 @@ class CourseModel extends Model
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             $sql_autres = "SELECT cours.id as cours_id, cours.name as cours_name, cours.content as cours_content, tags.name as tag_name, tags.color as tag_color FROM `cours`
-            INNER JOIN `tags` ON cours.tag_id = tags.id WHERE NOT tags.id = :tag LIMIT 2";
+            INNER JOIN `tags` ON cours.tag_id = tags.id WHERE NOT tags.id = :tag ORDER BY RAND() LIMIT 2";
             $stmt_autres = $this->_db->prepare($sql_autres);
             $stmt_autres->bindValue(":tag", $row['tag_id']);
             $stmt_autres->execute();
