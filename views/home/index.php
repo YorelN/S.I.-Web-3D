@@ -116,6 +116,7 @@
             <div class="link">
                 <a href="<?=ROOT_URL.'users/register'?>" class="blue_btn">Inscription</a>
                 <a href="<?=ROOT_URL.'users/login'?>" class="green_btn">Connexion</a>
+                <img src="assets/img-layout/inserm.png"  width="80px" height="50px" style="margin-top: 20px;" alt="">
             </div>
         </section>
 <?php  endif;?>

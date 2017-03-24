@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="control-group">
-                        <input type="password" class="login-field" placeholder="Faculté" name="universite">
+                        <input type="text" class="login-field" placeholder="Faculté" name="universite">
                     </div>
                     <?php Message::display()?>
                     <input type="submit" class="blue_btn" name="submit">

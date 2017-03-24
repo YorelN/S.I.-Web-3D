@@ -464,6 +464,14 @@ input:focus {
 .article div {
     padding: 0 6%;
     font-size: 1rem;
+    font-weight: 500;
+}
+.yellow_tag,
+.red_tag,
+.blue_tag,
+.green_tag,
+.purple_tag {
+    font-weight: 500;
 }
 
 
@@ -1039,4 +1047,35 @@ table {
         margin: 0 auto;
     }
 
+}
+
+@media screen and (max-width: 768px) {
+    #nav_bar {
+        padding-bottom: 5.5rem;
+    }
+
+    .onglet {
+        vertical-align: middle;
+    }
+
+    .onglet:nth-child(3) {
+        padding-top: 1.5rem;
+        vertical-align: middle;
+    }
+
+    .onglet:last-child {
+        padding-top: 1rem;
+    }
+
+    #login .article {
+        margin: 3rem auto;
+    }
+
+    #search_bar {
+        padding-top: 4rem;
+    }
+
+    .search_result article {
+        margin: 2.5rem auto;
+    }
 }

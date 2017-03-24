@@ -40,6 +40,7 @@
         div.content {
             margin: auto;
             width: 960px;
+            padding-top: 4rem;
         }
         div.broken,
         div.missing {

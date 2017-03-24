@@ -10,6 +10,11 @@
     <meta property="og:image"              content="http://vivianebadach.eu/doctorapp/doctorapp.svg" />
 <!--    <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />-->
     <title>Espace Personnel</title>
+    <style>
+        div .jauge {
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
 <div id="fb-root"></div>
@@ -103,7 +108,7 @@
 <section id="historique">
     <h2 style="font-size: 36px;">Progression dans les cours</h2>
     
-    <div style="width: 100%; height: 20px; background: #EF0000;margin-bottom: 40px; border-radius: 10px;position: relative;">
+    <div style="width: 100%; height: 20px; background: #EF0000;margin-bottom: 40px; border-radius: 10px;position: relative;" class="jauge">
         <div style="width: <?=$viewmodel['width']?>%; height: 20px; background: #6AC761; border-radius: 10px;"></div>
         <p style="position: absolute;top: 2px;left: <?=$viewmodel['width'] - 6?>%;"><?=$viewmodel['width']?>%</p>
     </div>
