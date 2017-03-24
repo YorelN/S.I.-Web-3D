@@ -112,6 +112,7 @@
         <div style="width: <?=$viewmodel['width']?>%; height: 20px; background: #6AC761; border-radius: 10px;"></div>
         <p style="position: absolute;top: 2px;left: <?=$viewmodel['width'] - 6?>%;"><?=$viewmodel['width']?>%</p>
     </div>
+    <p style="font: 18px 'Dosis'; margin-bottom: 15px;">Vous avez lu <?=$viewmodel['count']?> articles.</p>
     <div class="fb-share-button" data-href="http://vivianebadach.eu/doctorapp" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fvivianebadach.eu%2F&amp;src=sdkpreparse">Partager</a></div>
 
     <h1 style="font-size: 36px;margin-top: 10px;">Historique</h1>

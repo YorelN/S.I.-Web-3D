@@ -126,7 +126,7 @@
             <a href="<?=ROOT_URL . 'users/organisation'?>">
                 <img src="../../assets/img-layout/Pictos/organisaio.svg" alt="picto organisation">
                 <span>
-                    Organisation
+                    Espace Personnel
                 </span>
             </a>
         </li>
