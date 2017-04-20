@@ -48,5 +48,5 @@ In order to use Doctor'App locally, you'll need to take care of multiple factors
 - Download / Git Clone this repository
 - Use a server application such as : WAMP / MAMP / XAMP
   - Then either change your local server port to 8888 or open "config/config.php" and change the ROOT_URL definition at line 14 to the local port you are currently using.
-- Import the database structure in your personnal MySQL (PhpMyAdmin) --> config/db/sql, !Don't forget to name the local database "medical"!
+- Import the database structure in your personnal MySQL (PhpMyAdmin) --> config/db.sql, !Don't forget to call the local database "medical"!
 - You will have to rename the repository as "medical" (or change ROOT_URL in config/config.php line 14)
