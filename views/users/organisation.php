@@ -102,6 +102,7 @@
                     </tr>
                 </div> <!-- DAYS -->
             </table>
+            <div style="text-align: right">420</div>
         </div> <!-- CALENDAR -->
 </section>
 
